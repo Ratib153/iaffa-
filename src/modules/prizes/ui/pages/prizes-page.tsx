@@ -1,11 +1,14 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import Link from "next/link"
 
-const prizeCategories = [
+export const prizeCategories = [
   {
     title: "Best Feature Film",
+    slug: "best-feature-film",
     description: "Outstanding narrative feature film",
+    detailedDescription: "The Best Feature Film award recognizes exceptional narrative feature films that demonstrate outstanding storytelling, artistic vision, and cultural significance. This category celebrates full-length films that captivate audiences with compelling narratives, strong character development, and innovative filmmaking techniques.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="6" y="10" width="36" height="28" rx="2" />
@@ -18,7 +21,9 @@ const prizeCategories = [
   },
   {
     title: "Best Documentary",
+    slug: "best-documentary",
     description: "Excellence in non-fiction filmmaking",
+    detailedDescription: "The Best Documentary award honors excellence in non-fiction filmmaking, recognizing films that explore real-world stories with depth, authenticity, and journalistic integrity. This category celebrates documentaries that shed light on important issues, document cultural heritage, and provide meaningful insights into the human experience.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="24" cy="24" r="16" />
@@ -32,7 +37,9 @@ const prizeCategories = [
   },
   {
     title: "Best Short Film",
+    slug: "best-short-film",
     description: "Exceptional short-form storytelling",
+    detailedDescription: "The Best Short Film award celebrates exceptional short-form storytelling, recognizing films that deliver powerful narratives within a condensed format. This category honors filmmakers who master the art of concise storytelling, creating impactful experiences that resonate with audiences despite their brief duration.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="8" y="12" width="32" height="24" rx="2" />
@@ -42,7 +49,9 @@ const prizeCategories = [
   },
   {
     title: "Best Director",
+    slug: "best-director",
     description: "Outstanding directorial achievement",
+    detailedDescription: "The Best Director award recognizes outstanding directorial achievement, honoring filmmakers who demonstrate exceptional vision, leadership, and creative excellence in bringing stories to life. This category celebrates directors who masterfully guide all aspects of filmmaking, from performance to visual composition, creating cohesive and compelling cinematic experiences.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="24" cy="14" r="8" />
@@ -53,7 +62,9 @@ const prizeCategories = [
   },
   {
     title: "Best Cinematography",
+    slug: "best-cinematography",
     description: "Excellence in visual storytelling",
+    detailedDescription: "The Best Cinematography award celebrates excellence in visual storytelling, recognizing the artistry and technical skill of cinematographers who create stunning visual narratives. This category honors the craft of capturing light, composition, and movement to enhance storytelling and create memorable cinematic imagery.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="4" y="16" width="24" height="18" rx="2" />
@@ -64,7 +75,9 @@ const prizeCategories = [
   },
   {
     title: "Audience Choice Award",
+    slug: "audience-choice-award",
     description: "Selected by festival attendees",
+    detailedDescription: "The Audience Choice Award is selected by festival attendees, giving voice to the viewers who experience and connect with the films. This special recognition honors films that resonate most deeply with audiences, celebrating the power of cinema to move, inspire, and create meaningful connections between filmmakers and viewers.",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" />
@@ -140,9 +153,10 @@ export default function PrizesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {prizeCategories.map((prize) => (
-              <div
+              <Link
                 key={prize.title}
-                className="glass-card p-8 text-center hover:border-primary/30 transition-colors duration-300 group"
+                href={`/prizes/${prize.slug}`}
+                className="glass-card p-8 text-center hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
               >
                 <div className="text-primary mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {prize.icon}
@@ -150,8 +164,8 @@ export default function PrizesPage() {
                 <h3 className="font-serif text-xl font-semibold text-champagne mb-2 group-hover:text-primary transition-colors">
                   {prize.title}
                 </h3>
-                <p className="text-champagne/60 text-sm">{prize.description}</p>
-              </div>
+                <p className="text-champagne/60 text-sm leading-relaxed">{prize.description}</p>
+              </Link>
             ))}
           </div>
         </div>

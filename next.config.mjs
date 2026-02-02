@@ -7,10 +7,8 @@ const nextConfig = {
     unoptimized: true,
   },
   // Explicitly set root directory to avoid workspace root warning
-  experimental: {
-    turbo: {
-      root: process.cwd(),
-    },
+  turbopack: {
+    root: process.cwd(),
   },
 }
 
