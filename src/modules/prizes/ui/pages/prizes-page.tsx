@@ -110,7 +110,6 @@ const juryPanel = [
 export default function PrizesPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-2 overflow-hidden">
@@ -234,7 +233,6 @@ export default function PrizesPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 }
