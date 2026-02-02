@@ -39,7 +39,7 @@ export function ProgramHighlightsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">What We Offer</p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
             Program Highlights
           </h2>
         </div>
@@ -53,7 +53,7 @@ export function ProgramHighlightsSection() {
               <div className="w-12 h-12 flex items-center justify-center mb-6">
                 <program.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-champagne mb-4 group-hover:text-primary transition-colors">
+              <h3 className="font-libre-baskerville text-xl font-semibold text-champagne mb-4 group-hover:text-primary transition-colors">
                 {program.title}
               </h3>
               <p className="text-champagne/60 text-sm leading-relaxed">

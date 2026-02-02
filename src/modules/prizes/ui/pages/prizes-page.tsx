@@ -13,7 +13,6 @@ const prizeCategories = [
   {
     title: "Best Feature Film",
     description: "Outstanding narrative feature film",
-    prize: "$5,000",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="6" y="10" width="36" height="28" rx="2" />
@@ -27,7 +26,6 @@ const prizeCategories = [
   {
     title: "Best Documentary",
     description: "Excellence in non-fiction filmmaking",
-    prize: "$3,000",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="24" cy="24" r="16" />
@@ -42,7 +40,6 @@ const prizeCategories = [
   {
     title: "Best Short Film",
     description: "Exceptional short-form storytelling",
-    prize: "$2,000",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="8" y="12" width="32" height="24" rx="2" />
@@ -53,7 +50,6 @@ const prizeCategories = [
   {
     title: "Best Director",
     description: "Outstanding directorial achievement",
-    prize: "$2,000",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="24" cy="14" r="8" />
@@ -65,7 +61,6 @@ const prizeCategories = [
   {
     title: "Best Cinematography",
     description: "Excellence in visual storytelling",
-    prize: "$1,500",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="4" y="16" width="24" height="18" rx="2" />
@@ -77,7 +72,6 @@ const prizeCategories = [
   {
     title: "Audience Choice Award",
     description: "Selected by festival attendees",
-    prize: "$1,000",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" />
@@ -183,8 +177,7 @@ export default function PrizesPage() {
                 <h3 className="font-serif text-xl font-semibold text-champagne mb-2 group-hover:text-primary transition-colors">
                   {prize.title}
                 </h3>
-                <p className="text-champagne/60 text-sm mb-4">{prize.description}</p>
-                <p className="text-primary font-semibold text-lg">{prize.prize}</p>
+                <p className="text-champagne/60 text-sm">{prize.description}</p>
               </div>
             ))}
           </div>

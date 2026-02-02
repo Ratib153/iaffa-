@@ -18,7 +18,7 @@ export function HeroSection() {
           style={{ 
             border: 'none',
             boxShadow: 'none',
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.1) 10%, rgba(18, 18, 18, 0.3) 30%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.7) 70%, rgba(18, 18, 18, 1) 100%)'
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.07) 10%, rgba(18, 18, 18, 0.21) 30%, rgba(18, 18, 18, 0.35) 50%, rgba(18, 18, 18, 0.49) 70%, rgba(18, 18, 18, 0.7) 100%)'
           }}
         />
       </div>
@@ -27,7 +27,7 @@ export function HeroSection() {
       <div 
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none z-20"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.2) 20%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.8) 80%, #121212 100%)'
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.14) 20%, rgba(18, 18, 18, 0.35) 50%, rgba(18, 18, 18, 0.56) 80%, rgba(18, 18, 18, 0.7) 100%)'
         }}
       />
 
@@ -39,12 +39,15 @@ export function HeroSection() {
         </p>
         
         {/* Main Heading */}
-        <h1 className="font-libre-baskerville text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-champagne leading-[1.1] mb-8">
-          Narrating the <span className="italic" style={{ color: '#C6A85A' }}>Arab</span> Soul in Motion
+        <h1 
+          className="font-libre-baskerville text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8"
+          style={{ transform: 'scale(0.96)', color: '#FCEFB4' }}
+        >
+          Arab International Film Festival of Australia
         </h1>
         
         {/* Subtitle */}
-        <p className="text-champagne/70 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="font-libre-baskerville italic text-champagne/70 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
           Celebrating the rich tapestry of Arab cinema and culture
         </p>
 

@@ -33,7 +33,7 @@ export function FeaturedFilmsSection() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Now Showing</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
               Featured Films
             </h2>
           </div>
@@ -65,7 +65,7 @@ export function FeaturedFilmsSection() {
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                <h3 className="font-serif text-lg sm:text-xl font-semibold text-champagne mb-1 group-hover:text-primary transition-colors">
+                <h3 className="font-libre-baskerville text-lg sm:text-xl font-semibold text-champagne mb-1 group-hover:text-primary transition-colors">
                   {film.title}
                 </h3>
                 <p className="text-champagne/60 text-sm">Dir. {film.director}</p>

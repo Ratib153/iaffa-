@@ -8,8 +8,8 @@ export function ExperienceCinemaSection() {
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/images/arab-culture.jpg"
-              alt="Arab cultural heritage"
+              src="/images/cinema.jpg"
+              alt="Cinema experience"
               fill
               className="object-cover"
             />
@@ -19,7 +19,7 @@ export function ExperienceCinemaSection() {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-primary tracking-[0.2em] uppercase text-sm">Discover</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne leading-tight">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne leading-tight">
               Experience Arab Cinema
             </h2>
             <div className="space-y-4 text-champagne/70 leading-relaxed">

@@ -9,7 +9,7 @@ export function BePartSection() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Join Us</p>
-        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-champagne leading-tight mb-6">
+        <h2 className="font-libre-baskerville text-3xl sm:text-4xl lg:text-5xl font-bold text-champagne leading-tight mb-6">
           Be Part of the Story
         </h2>
         <p className="text-champagne/70 text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
