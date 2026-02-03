@@ -92,7 +92,7 @@ export function MembershipForm() {
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
-          <label htmlFor="fullName" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="fullName" className="block text-foreground text-sm mb-2">
             Full Name <span className="text-primary">*</span>
           </label>
           <input
@@ -102,12 +102,12 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.fullName}
             onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="Enter your full name"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="email" className="block text-foreground text-sm mb-2">
             Email Address <span className="text-primary">*</span>
           </label>
           <input
@@ -117,12 +117,12 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="your@email.com"
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="phone" className="block text-foreground text-sm mb-2">
             Phone <span className="text-primary">*</span>
           </label>
           <input
@@ -132,12 +132,12 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="+61 4xx xxx xxx"
           />
         </div>
         <div>
-          <label htmlFor="country" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="country" className="block text-foreground text-sm mb-2">
             Country <span className="text-primary">*</span>
           </label>
           <select
@@ -146,7 +146,7 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.country}
             onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
           >
             <option value="">Select country</option>
             {countries.map((country) => (
@@ -155,7 +155,7 @@ export function MembershipForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="membershipType" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="membershipType" className="block text-foreground text-sm mb-2">
             Membership Type <span className="text-primary">*</span>
           </label>
           <select
@@ -164,7 +164,7 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.membershipType}
             onChange={(e) => setFormData({ ...formData, membershipType: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
           >
             {membershipTypes.map((type) => (
               <option key={type} value={type}>{type}</option>
@@ -172,7 +172,7 @@ export function MembershipForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="organization" className="block text-champagne/70 text-sm mb-2">
+          <label htmlFor="organization" className="block text-foreground text-sm mb-2">
             Organization / Institution
           </label>
           <input
@@ -181,13 +181,13 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.organization}
             onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-            className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="Enter organization name"
           />
         </div>
       </div>
       <div className="mb-6">
-        <label htmlFor="message" className="block text-champagne/70 text-sm mb-2">
+        <label htmlFor="message" className="block text-foreground text-sm mb-2">
           Message (Optional)
         </label>
         <textarea
@@ -196,7 +196,7 @@ export function MembershipForm() {
           disabled={loading}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
+          className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
           placeholder="Tell us about yourself"
         />
       </div>
@@ -205,7 +205,7 @@ export function MembershipForm() {
         disabled={loading}
         className="w-full px-8 py-3 bg-primary text-primary-foreground font-medium tracking-wide hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? 'Joining...' : 'Join IAFFA'}
+        {loading ? 'Joining...' : 'Join AIFFA'}
       </button>
     </form>
   )

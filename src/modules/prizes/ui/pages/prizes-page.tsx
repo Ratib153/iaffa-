@@ -133,15 +133,6 @@ export default function PrizesPage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="pt-2 pb-24 bg-background flex items-center min-h-[400px]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <p className="text-champagne/70 leading-relaxed text-center">
-            The International Arab Film Festival of Australia recognizes outstanding achievements in filmmaking through our annual awards ceremony. Our awards celebrate the artistry, innovation, and cultural significance of Arab cinema, honoring filmmakers who push boundaries and tell compelling stories that resonate with audiences worldwide.
-          </p>
-        </div>
-      </section>
-
       {/* Prize Categories */}
       <section className="py-24 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,23 +141,32 @@ export default function PrizesPage() {
               Prize Categories
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {prizeCategories.map((prize) => (
               <Link
                 key={prize.title}
                 href={`/prizes/${prize.slug}`}
-                className="glass-card p-8 text-center hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
+                className="glass-card p-10 text-center hover:border-primary/30 transition-colors duration-300 group cursor-pointer block min-h-[280px] flex flex-col justify-center"
               >
-                <div className="text-primary mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="text-primary mb-8 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {prize.icon}
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-champagne mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-2xl font-semibold text-champagne mb-3 group-hover:text-primary transition-colors">
                   {prize.title}
                 </h3>
-                <p className="text-champagne/60 text-sm leading-relaxed">{prize.description}</p>
+                <p className="text-champagne/60 text-base leading-relaxed">{prize.description}</p>
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="pt-2 pb-24 bg-background flex items-center min-h-[400px]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <p className="text-champagne/70 leading-relaxed text-center">
+            The International Arab Film Festival of Australia recognizes outstanding achievements in filmmaking through our annual awards ceremony. Our awards celebrate the artistry, innovation, and cultural significance of Arab cinema, honoring filmmakers who push boundaries and tell compelling stories that resonate with audiences worldwide.
+          </p>
         </div>
       </section>
 

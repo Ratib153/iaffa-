@@ -38,28 +38,28 @@ export function Navigation() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-center">
           {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-sm text-champagne/80 hover:text-primary transition-colors duration-200"
+                className="px-4 py-3 text-base font-medium text-foreground hover:text-primary transition-colors duration-200"
               >
                 {item.label}
               </Link>
             ))}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-champagne hover:text-primary transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Button - Fixed at far right */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 text-champagne hover:text-primary transition-colors"
+        aria-label="Toggle menu"
+      >
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
 
       {/* Contact Button - Fixed at far right */}
       <Link

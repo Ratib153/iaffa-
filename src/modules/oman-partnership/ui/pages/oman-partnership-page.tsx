@@ -171,9 +171,25 @@ export default function OmanPartnershipPage() {
       {/* Final Authority Line */}
       <section className="py-16 bg-secondary">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-serif text-lg text-primary">
+          <p className="font-serif text-lg text-primary mb-8">
             AIFFA is delivered by the International Film Festival of Australia (IFFA), in partnership with the Oman Film Society.
           </p>
+          <div className="flex items-center justify-center gap-12">
+            <Image
+              src="/images/iffa.png"
+              alt="AIFFA Awards Logo"
+              width={200}
+              height={100}
+              className="h-24 w-auto object-contain"
+            />
+            <Image
+              src="/images/oman.png"
+              alt="Oman Film Society Logo"
+              width={200}
+              height={100}
+              className="h-24 w-auto object-contain"
+            />
+          </div>
         </div>
       </section>
     </main>

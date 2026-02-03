@@ -223,7 +223,7 @@ export default function SubmissionsForm() {
                 </button>
               </div>
               {actorFields.map((field, index) => (
-                <div key={field.id} className="bg-eerie-black/30 rounded-lg p-6 mb-4 border border-champagne/10">
+                <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-champagne font-medium">Actor {index + 1}</h4>
                     {actorFields.length > 1 && (
@@ -297,7 +297,7 @@ export default function SubmissionsForm() {
                 </button>
               </div>
               {directorFields.map((field, index) => (
-                <div key={field.id} className="bg-eerie-black/30 rounded-lg p-6 mb-4 border border-champagne/10">
+                <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-champagne font-medium">Director {index + 1}</h4>
                     {directorFields.length > 1 && (
@@ -369,7 +369,7 @@ export default function SubmissionsForm() {
                 </button>
               </div>
               {producerFields.map((field, index) => (
-                <div key={field.id} className="bg-eerie-black/30 rounded-lg p-6 mb-4 border border-champagne/10">
+                <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-champagne font-medium">Producer {index + 1}</h4>
                     {producerFields.length > 1 && (
@@ -441,7 +441,7 @@ export default function SubmissionsForm() {
                 </button>
               </div>
               {crewFields.map((field, index) => (
-                <div key={field.id} className="bg-eerie-black/30 rounded-lg p-6 mb-4 border border-champagne/10">
+                <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-champagne font-medium">Crew Member {index + 1}</h4>
                     {crewFields.length > 1 && (

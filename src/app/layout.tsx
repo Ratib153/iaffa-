@@ -26,11 +26,11 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: 'IAFFA - International Arab Film Festival of Australia',
+  title: 'AIFFA - Arab International Film Festival Of Australia',
   description: 'Celebrating the richness and diversity of Arab cinema in Australia. Join us for an unforgettable celebration of Arab storytelling.',
-  keywords: ['Arab cinema', 'film festival', 'Australia', 'IAFFA', 'Arab filmmakers', 'cultural events'],
+  keywords: ['Arab cinema', 'film festival', 'Australia', 'AIFFA', 'Arab filmmakers', 'cultural events'],
   openGraph: {
-    title: 'International Arab Film Festival of Australia',
+    title: 'Arab International Film Festival Of Australia',
     description: 'Celebrating the richness and diversity of Arab cinema in Australia',
     type: 'website',
   },

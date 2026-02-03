@@ -53,7 +53,7 @@ export default function MembershipPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
-            Join IAFFA Membership
+            Join AIFFA Membership
           </h1>
           <p className="text-champagne/70 text-lg max-w-2xl mx-auto mb-10">
             Connect, Learn, and Celebrate Arab Cinema
@@ -96,7 +96,7 @@ export default function MembershipPage() {
 
       {/* Membership Form Section */}
       <section id="join" className="py-24 bg-secondary">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne mb-4">
               Membership

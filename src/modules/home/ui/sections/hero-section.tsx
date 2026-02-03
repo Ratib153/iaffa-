@@ -42,7 +42,7 @@ export function HeroSection() {
         </h1>
         
         {/* Subtitle */}
-        <p className="font-libre-baskerville italic text-champagne/70 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="font-libre-baskerville italic text-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
           Celebrating the rich tapestry of Arab cinema and culture
         </p>
 

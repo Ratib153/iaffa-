@@ -1,27 +1,5 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import Image from "next/image"
-import { Calendar, MapPin, Download, Link } from "lucide-react"
 import ScheduleGrid from "../sections/sample-programs-grid"
-
-const programCards = [
-  {
-    title: "Workshops",
-    description: "Our workshops are designed to nurture creativity, technical skills, and storytelling abilities in filmmakers at all stages of their careers. From screenwriting and directing to cinematography and post-production, participants gain hands-on experience led by seasoned industry professionals.",
-  },
-  {
-    title: "Mentorship and Training Programs",
-    description: "IAFFA mentorship programs pair emerging talent with established filmmakers, producers, and industry experts. These one on one or small group sessions provide guidance on career development, project strategy, and navigating the global film industry.",
-  },
-  {
-    title: "Talent Exchange",
-    description: "Through our talent exchange initiatives, the festival facilitates collaboration between Arab filmmakers and Australian cinema professionals. Participants gain opportunities to work on cross-cultural projects, share creative perspectives, and expand their professional networks internationally.",
-  },
-  {
-    title: "Curated Film Screenings",
-    description: "Our curated screenings celebrate the richness and diversity of Arab cinema. Each selection highlights compelling narratives, innovative storytelling, and exceptional filmmaking from the Arab world. Screenings are complemented by Q&A sessions, panel discussions, and audience interactions.",
-  },
-]
 
 const sampleSchedule = [
   {
@@ -31,6 +9,7 @@ const sampleSchedule = [
     dayActivities: [
       "Festival welcome and programme overview",
       "Foundational filmmaking workshops (story, directing, producing)",
+      "Additional workshop session",
     ],
     eveningActivities: [
       "Opening networking gathering",
@@ -43,7 +22,8 @@ const sampleSchedule = [
     focus: "Individual growth and collaboration",
     dayActivities: [
       "One-on-one and small-group mentorship sessions",
-      "Talent exchange across creative roles",
+      "Talent exchange across writing, directing, producing, and crew roles",
+      "Collaborative project discussions",
     ],
     eveningActivities: [
       "Curated film screening",
@@ -55,11 +35,13 @@ const sampleSchedule = [
     title: "Industry & Career Pathways",
     focus: "Professional development",
     dayActivities: [
-      "Festival strategy and international circulation",
+      "Sessions on festival strategy and international circulation",
       "Distribution, markets, and co-production pathways",
+      "Industry networking session",
     ],
     eveningActivities: [
-      "Industry screening",
+      "Curated film screening",
+      "Industry panel discussion",
     ],
   },
   {
@@ -67,11 +49,13 @@ const sampleSchedule = [
     title: "From Development to Practice",
     focus: "Preparing for production",
     dayActivities: [
-      "Script development workshops",
-      "Budgeting and production planning",
+      "Script development and pre-production workshops",
+      "Budgeting, scheduling, and production planning",
+      "Production team formation",
     ],
     eveningActivities: [
       "Curated screening",
+      "Production planning sessions",
     ],
   },
   {
@@ -80,22 +64,25 @@ const sampleSchedule = [
     focus: "Hands-on filmmaking",
     dayActivities: [
       "Commencement of practical film production",
-      "On-set mentorship across departments",
+      "On-set mentorship covering directing, camera, sound, and workflow",
+      "Production documentation",
     ],
     eveningActivities: [
-      "Team check-ins and networking",
+      "Informal team check-ins and networking",
     ],
   },
   {
     day: 6,
-    title: "Completion & Post-Production",
+    title: "Completion & Post-Production Foundations",
     focus: "Refinement and reflection",
     dayActivities: [
       "Continued filming and pickups",
-      "Post-production workflow introduction",
+      "Introduction to editing and post-production workflows",
+      "Post-production planning",
     ],
     eveningActivities: [
-      "Final curated screening",
+      "Final curated film screening",
+      "Reflection and feedback session",
     ],
   },
   {
@@ -103,31 +90,15 @@ const sampleSchedule = [
     title: "Showcase, Awards & Closing",
     focus: "Outcomes and celebration",
     dayActivities: [
-      "Final project presentations",
-      "Group feedback and reflection",
+      "Final presentation of practical film projects",
+      "Group feedback and learning review",
+      "Talent and industry reflection session",
     ],
     eveningActivities: [
-      "Film showcase screening",
-      "Awards ceremony and closing reception",
+      "Practical Film Showcase screening",
+      "Awards presentation and recognition",
+      "Closing ceremony and networking reception",
     ],
-  },
-]
-
-
-const venues = [
-  {
-    name: "Palace Cinema Central",
-    location: "Sydney",
-    description: "Premium cinema with state-of-the-art projection and sound.",
-    address: "123 George Street",
-    image: "/images/palace-cinema.jpg",
-  },
-  {
-    name: "Dendy Opera Quays",
-    location: "Sydney",
-    description: "Boutique cinema with stunning harbour views.",
-    address: "2 East Circular Quay",
-    image: "/images/dendy-cinema.jpg",
   },
 ]
 
@@ -148,45 +119,21 @@ export default function ProgramPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
-            Festival Program
+          <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
+            Program & Schedule
           </h1>
           <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
-            Discover our carefully curated selection of films, workshops, and industry events celebrating Arab cinema.
+            Seven days of exceptional Arab cinema, workshops, panels, mentorship, and networking opportunities.
           </p>
         </div>
       </section>
 
-      {/* Program Detail Cards */}
+      {/* Festival Program */}
       <section className="py-24 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6">
-            {programCards.map((card) => (
-              <div
-                key={card.title}
-                className="glass-card p-8 border-l-2 border-l-primary"
-              >
-                <h3 className="font-serif text-2xl font-semibold text-champagne mb-4">
-                  {card.title}
-                </h3>
-                <p className="text-champagne/70 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sample Schedule */}
-      <section className="py-24 bg-secondary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">
-              Schedule
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
-              Sample Schedule
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
+              Festival Program
             </h2>
           </div>
 
@@ -194,42 +141,19 @@ export default function ProgramPage() {
         </div>
       </section>
 
-
-      {/* Venues Section */}
-      <section className="py-24 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Locations</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
-              Festival Venues
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {venues.map((venue) => (
-              <div key={venue.name} className="group overflow-hidden">
-                <div className="relative aspect-video overflow-hidden mb-6">
-                  <Image
-                    src={venue.image || "/placeholder.svg"}
-                    alt={venue.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-eerie-black/60 to-transparent" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-champagne mb-2 group-hover:text-primary transition-colors">
-                  {venue.name}
-                </h3>
-                <p className="text-champagne/70 text-sm mb-3">{venue.description}</p>
-                <div className="flex items-center gap-2 text-champagne/50 text-sm">
-                  <MapPin className="w-4 h-4" />
-                  <span>{venue.address}, {venue.location}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Programme Approach */}
+      <section className="py-24 bg-secondary">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne mb-6 text-center">
+            Programme Approach
+          </h2>
+          <p className="text-champagne/70 leading-relaxed text-center">
+            The Arab International Film Festival of Australia's programme is designed to guide participants from learning and mentorship into collaboration and real-world production. By integrating curated screenings, industry engagement, and hands-on filmmaking, AIFFA creates a structured pathway that supports creative growth, professional readiness, and long-term career sustainability for Arab filmmakers.
+          </p>
         </div>
       </section>
+
+
 
     </main >
   )

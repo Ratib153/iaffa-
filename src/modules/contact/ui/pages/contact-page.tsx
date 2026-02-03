@@ -113,7 +113,7 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <section className="py-24 bg-background">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-champagne">
               Send Us a Message
@@ -138,7 +138,7 @@ export default function ContactPage() {
             )}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="fullName" className="block text-champagne/70 text-sm mb-2">
+                <label htmlFor="fullName" className="block text-foreground text-sm mb-2">
                   Full Name <span className="text-primary">*</span>
                 </label>
                 <input
@@ -148,12 +148,12 @@ export default function ContactPage() {
                   disabled={loading}
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                  className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                   placeholder="Your full name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-champagne/70 text-sm mb-2">
+                <label htmlFor="email" className="block text-foreground text-sm mb-2">
                   Email <span className="text-primary">*</span>
                 </label>
                 <input
@@ -163,12 +163,12 @@ export default function ContactPage() {
                   disabled={loading}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                  className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                   placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-champagne/70 text-sm mb-2">
+                <label htmlFor="phone" className="block text-foreground text-sm mb-2">
                   Phone
                 </label>
                 <input
@@ -177,13 +177,13 @@ export default function ContactPage() {
                   disabled={loading}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                  className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                   placeholder="+61 4xx xxx xxx"
                 />
               </div>
             </div>
             <div className="mb-4">
-              <label htmlFor="subject" className="block text-champagne/70 text-sm mb-2">
+              <label htmlFor="subject" className="block text-foreground text-sm mb-2">
                 Subject <span className="text-primary">*</span>
               </label>
               <select
@@ -192,7 +192,7 @@ export default function ContactPage() {
                 disabled={loading}
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
               >
                 {subjectOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -200,7 +200,7 @@ export default function ContactPage() {
               </select>
             </div>
             <div className="mb-6">
-              <label htmlFor="message" className="block text-champagne/70 text-sm mb-2">
+              <label htmlFor="message" className="block text-foreground text-sm mb-2">
                 Message <span className="text-primary">*</span>
               </label>
               <textarea
@@ -210,7 +210,7 @@ export default function ContactPage() {
                 disabled={loading}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-eerie-black/50 border border-primary/20 px-4 py-3 text-champagne placeholder-champagne/30 focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
+                className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
                 placeholder="How can we help you?"
               />
             </div>
@@ -233,25 +233,19 @@ export default function ContactPage() {
               Contact Information
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactInfo.map((item) => (
-              <div key={item.title} className="glass-card p-8 text-center">
-                <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                  <item.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-lg font-semibold text-champagne mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-champagne/50 text-sm mb-3">{item.subtitle}</p>
-                {item.href ? (
-                  <a href={item.href} className="text-primary hover:underline text-sm break-all">
-                    {item.value}
-                  </a>
-                ) : (
-                  <p className="text-champagne/70 text-sm">{item.value}</p>
-                )}
+          <div className="flex justify-center">
+            <div className="glass-card p-8 text-center">
+              <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <Mail className="w-7 h-7 text-primary" strokeWidth={1.5} />
               </div>
-            ))}
+              <h3 className="font-serif text-lg font-semibold text-champagne mb-1">
+                Email
+              </h3>
+              <p className="text-champagne/50 text-sm mb-3">General Inquiries</p>
+              <a href="mailto:info@iaffa.org.au" className="text-primary hover:underline text-sm break-all">
+                info@iaffa.org.au
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -273,7 +267,7 @@ export default function ContactPage() {
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/arabfilmfestivalofaustralia?igsh=MWZncHdtYndocmlkaQ%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -297,28 +291,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Department Contacts */}
-      <section className="py-24 bg-secondary">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-champagne">
-              Department Contacts
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {departmentContacts.map((dept) => (
-              <div key={dept.title} className="glass-card p-6">
-                <h3 className="font-serif text-base font-semibold text-champagne mb-2">
-                  {dept.title}
-                </h3>
-                <a href={`mailto:${dept.email}`} className="text-primary hover:underline text-sm">
-                  {dept.email}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   )
 }

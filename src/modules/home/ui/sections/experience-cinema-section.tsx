@@ -30,22 +30,6 @@ export function ExperienceCinemaSection() {
                 Meet filmmakers, engage in discussions, and immerse yourself in diverse narratives from across the Arab world.
               </p>
             </div>
-            <div className="flex items-center gap-8 pt-4">
-              <div>
-                <p className="font-serif text-3xl font-bold text-primary">50+</p>
-                <p className="text-champagne/60 text-sm">Films Screened</p>
-              </div>
-              <div className="w-px h-12 bg-primary/20" />
-              <div>
-                <p className="font-serif text-3xl font-bold text-primary">15</p>
-                <p className="text-champagne/60 text-sm">Countries</p>
-              </div>
-              <div className="w-px h-12 bg-primary/20" />
-              <div>
-                <p className="font-serif text-3xl font-bold text-primary">10</p>
-                <p className="text-champagne/60 text-sm">Festival Days</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

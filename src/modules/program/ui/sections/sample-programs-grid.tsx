@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function ScheduleGrid({ sampleSchedule }: { sampleSchedule: any[] }) {
   const [mounted, setMounted] = useState(false);
@@ -14,70 +15,82 @@ export default function ScheduleGrid({ sampleSchedule }: { sampleSchedule: any[]
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {sampleSchedule.map((day: any) => (
-        <Link
-          key={`day-${day.day}`}   // ✅ stable key
-          href={`/program/day-${String(day.day)}`} // ✅ normalized
-          className="block"
-        >
+      {sampleSchedule.map((day: any) => {
+        const dayActivitiesToShow = day.dayActivities.slice(0, 2);
+        const dayActivitiesMore = day.dayActivities.length > 2;
+        const eveningActivitiesToShow = day.eveningActivities.slice(0, 1);
+        const eveningActivitiesMore = day.eveningActivities.length > 1;
+
+        return (
           <div
-            className="bg-background/60 hover:bg-background/90 transition-all duration-300 rounded-xl p-6 border border-white/10 hover:border-primary/40 flex flex-col"
+            key={`day-${day.day}`}
+            className={`glass-card p-8 rounded-lg flex flex-col h-full ${day.day === 7 ? 'md:col-span-2' : ''}`}
           >
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">
+            {/* Number Badge */}
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-2xl">
                   {day.day}
                 </span>
               </div>
-
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-champagne">
-                  Day {day.day} – {day.title}
-                </h3>
-                <p className="text-champagne/60 text-xs italic">
-                  Focus: {day.focus}
-                </p>
-              </div>
             </div>
 
-            <div className="space-y-4 flex-1">
-              <div>
-                <p className="text-champagne/70 text-xs font-semibold mb-2">
-                  Day
-                </p>
-                <ul className="space-y-1">
-                  {day.dayActivities.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-champagne/60"
-                    >
-                      <span className="text-primary mt-1">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Title and Focus */}
+            <h3 className="font-libre-baskerville text-xl font-bold text-champagne mb-2 text-center">
+              Day {day.day} – {day.title}
+            </h3>
+            <p className="text-champagne/70 text-sm mb-6 text-center">
+              Focus: {day.focus}
+            </p>
 
-              <div>
-                <p className="text-champagne/70 text-xs font-semibold mb-2">
-                  Evening
-                </p>
-                <ul className="space-y-1">
-                  {day.eveningActivities.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-champagne/60"
-                    >
-                      <span className="text-primary mt-1">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Day Activities */}
+            <div className="mb-6 flex-1">
+              <p className="text-champagne/70 text-sm font-semibold mb-3">Day:</p>
+              <ul className="space-y-2 mb-3">
+                {dayActivitiesToShow.map((item: string) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2 text-sm text-champagne/80"
+                  >
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {dayActivitiesMore && (
+                <p className="text-champagne/60 text-sm">+1 more activities</p>
+              )}
             </div>
+
+            {/* Evening Activities */}
+            <div className="mb-6">
+              <p className="text-champagne/70 text-sm font-semibold mb-3">Evening:</p>
+              <ul className="space-y-2 mb-3">
+                {eveningActivitiesToShow.map((item: string) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2 text-sm text-champagne/80"
+                  >
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {eveningActivitiesMore && (
+                <p className="text-champagne/60 text-sm">+1 more activities</p>
+              )}
+            </div>
+
+            {/* Learn More Link */}
+            <Link
+              href={`/program/day-${String(day.day)}`}
+              className="text-primary hover:text-primary/80 font-medium text-sm flex items-center gap-2 mt-auto"
+            >
+              Learn More <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-        </Link>
-      ))}
+        );
+      })}
     </div>
   );
 }
