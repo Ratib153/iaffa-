@@ -72,7 +72,7 @@ export function Navigation() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "lg:hidden absolute top-16 left-0 right-0 bg-eerie-black/70 border-0 shadow-none transition-all duration-300",
+          "lg:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border border-primary/10 shadow-lg transition-all duration-300",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}
       >

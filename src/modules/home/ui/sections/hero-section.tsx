@@ -18,7 +18,7 @@ export function HeroSection() {
           style={{ 
             border: 'none',
             boxShadow: 'none',
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.07) 10%, rgba(18, 18, 18, 0.21) 30%, rgba(18, 18, 18, 0.35) 50%, rgba(18, 18, 18, 0.49) 70%, rgba(18, 18, 18, 0.7) 100%)'
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 0.9) 100%)'
           }}
         />
       </div>
@@ -27,7 +27,7 @@ export function HeroSection() {
       <div 
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none z-20"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(18, 18, 18, 0.14) 20%, rgba(18, 18, 18, 0.35) 50%, rgba(18, 18, 18, 0.56) 80%, rgba(18, 18, 18, 0.7) 100%)'
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 1) 100%)'
         }}
       />
 

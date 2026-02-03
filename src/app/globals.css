@@ -4,24 +4,24 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #121212;
-  --foreground: #F5E6CA;
-  --card: #1a1a1a;
-  --card-foreground: #F5E6CA;
-  --popover: #1a1a1a;
-  --popover-foreground: #F5E6CA;
+  --background: #ffffff;
+  --foreground: #121212;
+  --card: #f9f9f9;
+  --card-foreground: #121212;
+  --popover: #ffffff;
+  --popover-foreground: #121212;
   --primary: #D4AF37;
   --primary-foreground: #121212;
-  --secondary: #1f1f1f;
-  --secondary-foreground: #F5E6CA;
-  --muted: #2a2a2a;
-  --muted-foreground: #a89f8a;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #121212;
+  --muted: #e5e5e5;
+  --muted-foreground: #666666;
   --accent: #D4AF37;
   --accent-foreground: #121212;
   --destructive: #ef4444;
   --destructive-foreground: #fef2f2;
-  --border: #333333;
-  --input: #2a2a2a;
+  --border: #e0e0e0;
+  --input: #f5f5f5;
   --ring: #D4AF37;
   --chart-1: #D4AF37;
   --chart-2: #F5E6CA;
@@ -30,7 +30,7 @@
   --chart-5: #B8860B;
   --radius: 0.5rem;
   --gold: #D4AF37;
-  --champagne: #F5E6CA;
+  --champagne: #8B7355;
   --eerie-black: #121212;
   --sidebar: oklch(0.985 0 0); /* Added from shadcn default */
   --sidebar-foreground: oklch(0.145 0 0); /* Added from shadcn default */
@@ -144,10 +144,11 @@
 }
 
 .glass-card {
-  background: rgba(26, 26, 26, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Islamic geometric pattern for footer */
