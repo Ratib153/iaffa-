@@ -37,7 +37,7 @@ const benefits = [
 
 export default function MembershipPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -46,16 +46,16 @@ export default function MembershipPage() {
             src="/images/gala-event.jpg"
             alt="Festival gala"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
             Join AIFFA Membership
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-champagne/90 text-lg max-w-2xl mx-auto mb-10">
             Connect, Learn, and Celebrate Arab Cinema
           </p>
           <a
@@ -68,7 +68,7 @@ export default function MembershipPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
@@ -79,7 +79,7 @@ export default function MembershipPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="glass-card p-8 text-center hover:border-primary/30 transition-colors duration-300 group"
+                className="bg-gray-900 p-8 text-center hover:border-primary/30 transition-colors duration-300 group"
               >
                 <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <benefit.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
@@ -87,7 +87,7 @@ export default function MembershipPage() {
                 <h3 className="font-serif text-lg font-semibold text-champagne mb-1 group-hover:text-primary transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-champagne/60 text-sm">{benefit.subtitle}</p>
+                <p className="text-champagne/85 text-sm">{benefit.subtitle}</p>
               </div>
             ))}
           </div>
@@ -95,13 +95,13 @@ export default function MembershipPage() {
       </section>
 
       {/* Membership Form Section */}
-      <section id="join" className="py-24 bg-secondary">
+      <section id="join" className="py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne mb-4">
               Membership
             </h2>
-            <p className="text-champagne/70">
+            <p className="text-champagne/90">
               Fill out the form below to join our community
             </p>
           </div>
@@ -110,15 +110,15 @@ export default function MembershipPage() {
       </section>
 
       {/* Support Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-black">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-champagne/60">
+          <p className="text-champagne/85">
             Questions? Contact us at{" "}
             <a href="mailto:info@iaffa.com" className="text-primary hover:underline">
               info@aiffa.com.au
             </a>
           </p>
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+          {/* <div className="mt-4 flex items-center justify-center gap-4 text-sm">
             <a href="/privacy" className="text-champagne/40 hover:text-primary transition-colors">
               Privacy Policy
             </a>
@@ -126,7 +126,7 @@ export default function MembershipPage() {
             <a href="/terms" className="text-champagne/40 hover:text-primary transition-colors">
               Terms & Conditions
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>

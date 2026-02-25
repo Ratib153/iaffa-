@@ -112,10 +112,10 @@ export default function SubmissionsForm() {
   }
 
   return (
-    <main className="min-h-screen bg-background py-16">
+    <main className="min-h-screen bg-black py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-card p-8 lg:p-12">
-          <p className="text-center text-champagne/70 mb-8">Online Submission Form</p>
+        <div className="bg-gray-900 p-8 lg:p-12">
+          <p className="text-center text-champagne/90 mb-8">Online Submission Form</p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             {/* Film Details */}
@@ -607,7 +607,7 @@ export default function SubmissionsForm() {
                 href="https://filmfreeway.com/ArabInternationalFilmFestivalofAustralia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-background border-2 border-primary hover:bg-primary/10 text-primary font-semibold py-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-lg"
+                className="w-full bg-gray-800 border-2 border-primary hover:bg-gold hover:text-white text-primary font-semibold py-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-lg"
               >
                 Submit via FilmFreeway
               </a>

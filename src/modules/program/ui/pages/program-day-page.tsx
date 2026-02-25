@@ -14,10 +14,10 @@ export function ProgramDayPage({ day }: Props) {
   if (!data) return null
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
@@ -54,9 +54,9 @@ export function ProgramDayPage({ day }: Props) {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-card p-8 lg:p-12">
+          <div className="bg-gray-900 p-8 lg:p-12">
 
             {/* Day Activities */}
             <section className="mb-12">

@@ -1,0 +1,74 @@
+'use client'
+
+import Image from "next/image"
+import Link from "next/link"
+
+export default function TheTurtleFilmPage() {
+  return (
+    <main className="min-h-screen w-full pt-12 bg-black">
+      {/* Hero Image Section */}
+      <div className="w-full bg-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="relative overflow-hidden rounded-lg shadow-2xl max-w-2xl mx-auto">
+            <Image
+              src="/images/Films/The_Turtle.jpg"
+              alt="The Turtle - Film Poster"
+              width={800}
+              height={1200}
+              className="w-full h-auto object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Details Section */}
+      <div className="w-full bg-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Details */}
+            <div className="lg:col-span-2">
+              <h1 className="text-4xl font-bold mb-4 text-champagne">The Turtle</h1>
+              
+              {/* Film Details Box */}
+              <div className="bg-gray-900 border-l-4 border-[#C9A84F] p-6 rounded-lg mb-8">
+                <h2 className="text-2xl font-semibold mb-6 text-champagne">Film Details</h2>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-champagne/70 font-semibold">Director</p>
+                    <p className="text-lg text-champagne/90">Nouf Saad</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-champagne/70 font-semibold">Country</p>
+                    <p className="text-lg text-champagne/90">Saudi Arabia</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm text-champagne/70 font-semibold">Language</p>
+                    <p className="text-lg text-champagne/90">Arabic</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-semibold mb-4 text-champagne">Synopsis</h3>
+                <p className="text-lg text-champagne/85 leading-relaxed">
+                  The Turtle is a quiet, poetic short film about grief, healing, and the fragile courage it takes to keep going.
+In a solitary room, a woman forms a gentle bond with a small turtle — a silent companion that mirrors her own emotional retreat after loss. As she begins to care for it, she slowly reconnects with life, beauty, and herself. But when that delicate world is suddenly disrupted, the woman is forced to confront the truth of her pain and the thin line between comfort and escape.
+Told through silent film but rich visual symbolism, The Turtle explores how healing does not come through forgetting, but through learning to carry what we have lost — slowly, carefully, and with love.
+
+                </p>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+    </main>
+  )
+}

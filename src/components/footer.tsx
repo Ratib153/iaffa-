@@ -11,7 +11,7 @@ const festivalLinks = [
 ]
 
 const resourceLinks = [
-  { label: "Media & Press", href: "/contact" },
+  // { label: "Media & Press", href: "/contact" },
   { label: "Partners", href: "/oman-partnership" },
 ]
 
@@ -22,7 +22,7 @@ const connectLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-primary/10">
+    <footer className="bg-black border-t border-primary/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
@@ -127,23 +127,23 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <Link
                 href="/membership"
                 className="inline-block px-6 py-2.5 border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 Newsletter
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Legal Bar */}
         <div className="mt-16 pt-8 border-t border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-champagne/40 text-sm">
+          <p className="text-champagne/70 text-sm">
             © 2026 Arab International Film Festival of Australia
           </p>
-          <div className="flex items-center gap-6">
+          {/* <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-champagne/40 hover:text-primary text-sm transition-colors">
               Privacy Policy
             </Link>
@@ -153,7 +153,7 @@ export function Footer() {
             <Link href="/accessibility" className="text-champagne/40 hover:text-primary text-sm transition-colors">
               Accessibility
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -35,7 +35,7 @@ const programs = [
 
 export function ProgramHighlightsSection() {
   return (
-    <section className="py-24 bg-secondary">
+    <section className="py-24 bg-black"> {/*secondary*/}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">What We Offer</p>
@@ -48,15 +48,15 @@ export function ProgramHighlightsSection() {
           {programs.map((program) => (
             <div
               key={program.title}
-              className="glass-card p-8 hover:border-primary/30 transition-colors duration-300 group"
-            >
+              className="bg-gray-900 p-8 hover:border-primary/30 transition-colors duration-300 group"
+            >{/*glass card */}
               <div className="w-12 h-12 flex items-center justify-center mb-6">
                 <program.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-libre-baskerville text-xl font-semibold text-champagne mb-4 group-hover:text-primary transition-colors">
-                {program.title}
+              <h3 className="font-libre-baskerville text-xl font-semibold text-gray-300 mb-4 group-hover:text-primary transition-colors">
+                {program.title} {/*champagne*/}
               </h3>
-              <p className="text-champagne/60 text-sm leading-relaxed">
+              <p className="text-champagne/85 text-sm leading-relaxed">
                 {program.description}
               </p>
             </div>

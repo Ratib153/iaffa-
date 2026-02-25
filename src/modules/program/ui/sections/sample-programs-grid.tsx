@@ -7,8 +7,8 @@ interface DayItem {
   day: number
   title: string
   focus: string
-  dayActivities: string[]
-  eveningActivities: string[]
+  dayActivities: readonly string[]
+  eveningActivities: readonly string[]
 }
 
 export default function ScheduleGrid({ sampleSchedule }: { sampleSchedule: DayItem[] }) {
@@ -23,7 +23,7 @@ export default function ScheduleGrid({ sampleSchedule }: { sampleSchedule: DayIt
         return (
           <div
             key={day.day}
-            className={`glass-card p-8 rounded-lg flex flex-col h-full ${day.day === 7 ? 'md:col-span-2' : ''}`}
+            className={`bg-gray-900 p-8 rounded-lg flex flex-col h-full ${day.day === 7 ? 'md:col-span-2' : ''}`}
           >
             {/* Title and Focus */}
             <h3 className="font-libre-baskerville text-xl font-bold text-champagne mb-2 text-center">

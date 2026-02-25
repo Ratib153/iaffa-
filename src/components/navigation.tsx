@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -17,23 +17,39 @@ const navItems = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-0 shadow-none"
-      style={{ backgroundColor: "#0a0a0a" }}
-    >
-      {/* Logo - Fixed at far left corner */}
+      className="fixed top-0 left-0 right-0 z-50 border-0 shadow-none transition-all duration-300"
+      style={{
+        background: isScrolled
+          ? "#0a0a0a"
+          : "#000000",
+      }}
+    > {/*"#d8bca0"*/}
+      {/* Logo - Fixed at far left corner, appears on scroll */}
       <Link 
         href="/" 
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 flex items-center"
+        className={cn(
+          "absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 flex items-center transition-opacity duration-300",
+          isScrolled ? "opacity-100 visible" : "opacity-100 visible" /*logo opacity-0 invisible*/
+        )}
       >
         <Image
           src="/images/aiffalogo-bg.png"
           alt="AIFFA Logo"
           width={120} 
           height={40} 
-          className="h-auto w-[100px] sm:w-[130px]" // Use Tailwind to control responsive sizing
+          className="h-auto w-[100px] sm:w-[130px]"
           priority
         />
       </Link>
@@ -46,8 +62,13 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-3 text-base font-medium transition-colors duration-200 text-[#f7f2ed] hover:text-[#E6C15A]"
-              >
+                className={cn(
+                  "px-4 py-3 text-base font-medium transition-colors duration-200",
+                  isScrolled
+                    ? "text-[#f7f2ed] hover:text-[#E6C15A]"
+                    : "text-[#f7f2ed] hover:text-[#E6C15A]"
+                )}
+              > {/*"text-[#0a0a0a] hover:text-white"*/ }
                 {item.label}
               </Link>
             ))}
@@ -58,7 +79,12 @@ export function Navigation() {
       {/* Mobile Menu Button - Fixed at far right */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 text-champagne hover:text-primary transition-colors"
+        className={cn(
+          "lg:hidden absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 transition-colors",
+          isScrolled
+            ? "text-champagne hover:text-primary"
+            : "text-[#0a0a0a] hover:text-[#C9A84F]"
+        )}
         aria-label="Toggle menu"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

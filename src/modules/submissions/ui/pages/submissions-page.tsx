@@ -45,24 +45,24 @@ const importantDates = [
   },
 ]
 
-const selectionSteps = [
-  {
-    title: "Submit",
-    description: "Upload your film via our submission platform.",
-  },
-  {
-    title: "Review",
-    description: "Programming committee evaluates all entries.",
-  },
-  {
-    title: "Selection",
-    description: "Selected filmmakers notified by September 1.",
-  },
-]
+// const selectionSteps = [
+//   {
+//     title: "Submit",
+//     description: "Upload your film via our submission platform.",
+//   },
+//   {
+//     title: "Review",
+//     description: "Programming committee evaluates all entries.",
+//   },
+//   {
+//     title: "Selection",
+//     description: "Selected filmmakers notified by September 1.",
+//   },
+// ]
 
 export default function SubmissionsPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -71,23 +71,23 @@ export default function SubmissionsPage() {
             src="/images/film-set.jpg"
             alt="Professional film set"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
             Film Submissions
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
+          <p className="text-champagne/90 text-lg max-w-2xl mx-auto">
             Share your story with audiences across Australia
           </p>
         </div>
       </section>
 
       {/* Call for Submissions */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
@@ -95,7 +95,7 @@ export default function SubmissionsPage() {
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne leading-tight">
                 Share Your Vision
               </h2>
-              <p className="text-champagne/70 leading-relaxed">
+              <p className="text-champagne/90 leading-relaxed">
                 The International Arab Film Festival of Australia invites filmmakers from around the world to submit their work for consideration in our 2026 edition. We are seeking bold, innovative, and compelling films that showcase the diversity and depth of Arab cinema.
               </p>
               <p className="text-champagne/70 leading-relaxed">
@@ -116,7 +116,7 @@ export default function SubmissionsPage() {
       </section>
 
       {/* Eligibility Requirements */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-black">
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center mb-16 px-6 sm:px-8 lg:px-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
@@ -127,19 +127,19 @@ export default function SubmissionsPage() {
             {eligibilityRequirements.map((requirement) => (
               <div
                 key={requirement}
-                className="flex items-start gap-4 glass-card p-8 min-h-[120px]"
+                className="flex items-start gap-4 bg-gray-900 p-8 min-h-[120px]"
               >
                 <div className="shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-1">
                   <Check className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-champagne/80 text-base leading-relaxed">{requirement}</p>
+                <p className="text-champagne/90 text-base leading-relaxed">{requirement}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Selection Process */}
+      {/* Selection Process
       <section className="py-24 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -166,7 +166,7 @@ export default function SubmissionsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <SubmissionsForm />
 

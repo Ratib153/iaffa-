@@ -85,7 +85,7 @@ const juryPanel = [
 export default function PrizesPage() {
   const router = useRouter()
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-2 overflow-hidden">
@@ -97,20 +97,20 @@ export default function PrizesPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
             Prizes
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
+          <p className="text-champagne/90 text-lg max-w-2xl mx-auto">
             Celebrating excellence in Arab cinema
           </p>
         </div>
       </section>
 
       {/* Prize Categories */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
@@ -130,7 +130,7 @@ export default function PrizesPage() {
                     router.push(`/prizes/${prize.slug}`)
                   }
                 }}
-                className="glass-card p-8 sm:p-10 hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
+                className="bg-gray-900 p-8 sm:p-10 hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
               >
                 <div className="flex items-start gap-5">
                   <div className="text-primary shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300">
@@ -142,10 +142,10 @@ export default function PrizesPage() {
                       {prize.title}
                     </h3>
 
-                    <p className="text-champagne/60 text-sm mb-5">{prize.description}</p>
+                    <p className="text-champagne/85 text-sm mb-5">{prize.description}</p>
 
                     <div className="flex items-center justify-between mb-3">
-                      <p className="text-champagne/80 font-medium">Winner Benefits</p>
+                      <p className="text-champagne/90 font-medium">Winner Benefits</p>
 
                       {/* This acts like internal "View details" link without nesting anchors */}
                       <button
@@ -161,7 +161,7 @@ export default function PrizesPage() {
                     </div>
 
                     {prize.benefits?.length ? (
-                      <ul className="space-y-2 text-champagne/70 text-sm leading-relaxed">
+                      <ul className="space-y-2 text-champagne/85 text-sm leading-relaxed">
                         {prize.benefits.map((b) => {
                           const label = typeof b === "string" ? b : b.label
                           const href = typeof b === "string" ? undefined : b.href
@@ -200,9 +200,9 @@ export default function PrizesPage() {
       </section>
 
       {/* Overview */}
-      <section className="pt-2 pb-24 bg-background flex items-center min-h-[400px]">
+      <section className="pt-2 pb-24 bg-black flex items-center min-h-[400px]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <p className="text-champagne/70 leading-relaxed text-center">
+          <p className="text-champagne/90 leading-relaxed text-center">
             The International Arab Film Festival of Australia recognizes outstanding achievements in filmmaking through our annual awards ceremony. Our awards celebrate the artistry, innovation, and cultural significance of Arab cinema, honoring filmmakers who push boundaries and tell compelling stories that resonate with audiences worldwide.
           </p>
         </div>

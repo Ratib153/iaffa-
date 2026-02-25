@@ -4,12 +4,30 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="w-full">
+            {/* LOGO SECTION */}
+      <div
+        className="w-full pt-24 pb-8"
+        style={{ background: "black", minHeight: "200px" }} 
+      > {/*"linear-gradient(to bottom, #d8bca0 0%, #d8bca0 50%, #f7f2ed 100%)" */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <Image
+            src="/images/aiffalogo-bg.png"  
+            alt="AIFFA – Arab International Film Festival of Australia"
+            width={520}
+            height={100}
+            priority
+            className="h-auto w-[280px] sm:w-[360px] md:w-[460px]"
+          />
+        </div>
+      </div>
+
+
       {/* 1) VIDEO SECTION */}
       <div
         className="w-full pt-28 pb-20"
-        style={{ backgroundColor: "#f7f2ed" }} 
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        style={{ backgroundColor: "#000000" }} 
+      > {/*"#f7f2ed"*/}
+        <div className="max-w-[1400px] mx-auto px-6">
           <p
             className="mb-3 text-left text-sm sm:text-base uppercase tracking-widest"
             style={{ color: "#C9A84F" }}
@@ -18,44 +36,33 @@ export function HeroSection() {
           </p>
 
           <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/30 shadow-2xl bg-black/30">
-            <video
-              className="h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/videos/hero-poster.jpg" // optional thumbnail 
-            >
-              <source src="/videos/hero.mp4" type="video/mp4" />
-            </video>
+            <div className="relative h-full w-full">
+              {/* Gradient overlay for depth */}
+              <div className="absolute inset-0 z-10 rounded-2xl pointer-events-none" style={{background: "linear-gradient(to bottom, rgba(201,168,79,0.15) 0%, rgba(0,0,0,0.15) 100%)"}} />
+              <video
+                className="h-full w-full object-cover rounded-2xl border-2 border-[#C9A84F] z-0"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/videos/hero-poster.jpg"
+              >
+                <source src="/videos/hero.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* LOGO SECTION */}
-      <div
-        className="w-full pt-2 pb-0"
-        style={{ backgroundColor: "#000000" }} 
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-          <Image
-            src="/images/aiffalogo-bg.png"  
-            alt="AIFFA – Arab International Film Festival of Australia"
-            width={520}
-            height={200}
-            priority
-            className="h-auto w-[280px] sm:w-[360px] md:w-[460px]"
-          />
-        </div>
-      </div>
+
 
       {/* 3) DESCRIPTION + CTA SECTION */}
       <div
         className="w-full pt-12 py-10"
-        style={{ backgroundColor: "#f7f2ed" }} 
-      >
+        style={{ backgroundColor: "#000000" }} 
+      >{/*same as above color*/}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-libre-baskerville text-center text-sm sm:text-base max-w-3xl mx-auto leading-relaxed text-foreground/80 mb-10">
+          <p className="font-libre-baskerville text-center text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-10" style={{ color: "#C9A84F" }}>
             AIFFA was established through a collaboration between the Oman Film Society and the
             International Film Festival of Australia (IFFA) to connect Omani and Arab filmmakers with
             Australia on an international platform, supporting youth and emerging talent through

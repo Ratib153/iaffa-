@@ -70,7 +70,7 @@ const prizes = [
 
 export function PrizeCategoriesSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Recognition</p>

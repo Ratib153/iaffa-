@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Mail, MapPin, Phone, Facebook, Instagram, Twitter, AlertCircle, CheckCircle } from "lucide-react"
+import { Mail, MapPin, Phone, Facebook, Instagram, Twitter, Youtube, Linkedin, AlertCircle, CheckCircle } from "lucide-react"
 import {
   Select,
   SelectContent,
@@ -11,29 +11,29 @@ import {
 } from "@/components/ui/select"
 import { phonePrefixes } from "@/lib/phone-prefixes"
 
-const contactInfo = [
-  {
-    icon: Mail,
-    title: "Email",
-    subtitle: "General Inquiries",
-    value: " info@aiffa.com.au",
-    href: "mailto: info@aiffa.com.au",
-  },
-  {
-    icon: MapPin,
-    title: "Office Address",
-    subtitle: "Visit Us",
-    value: "123 Festival Street, Sydney NSW 2000, Australia",
-    href: null,
-  },
-  {
-    icon: Phone,
-    title: "Phone",
-    subtitle: "Office Hours",
-    value: "+61 2 3456 7890",
-    href: "tel:+61234567890",
-  },
-]
+// const contactInfo = [
+//   {
+//     icon: Mail,
+//     title: "Email",
+//     subtitle: "General Inquiries",
+//     value: " info@aiffa.com.au",
+//     href: "mailto: info@aiffa.com.au",
+//   },
+//   {
+//     icon: MapPin,
+//     title: "Office Address",
+//     subtitle: "Visit Us",
+//     value: "36 Chapel Street, Windsor,VIC 3181 Australia",
+//     href: null,
+//   },
+//   {
+//     icon: Phone,
+//     title: "Phone",
+//     subtitle: "Office Hours",
+//     value: "+61phone",
+//     href: "tel:+61phone",
+//   },
+// ]
 
 const departmentContacts = [
   { title: "Film Submissions", email: "submissions@aiffa.com.au" },
@@ -103,7 +103,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -115,27 +115,27 @@ export default function ContactPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
             Contact Us
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
+          <p className="text-champagne/90 text-lg max-w-2xl mx-auto">
             Get in touch with the International Arab Film Festival of Australia
           </p>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-champagne">
               Send Us a Message
             </h2>
           </div>
-          <form onSubmit={handleSubmit} className="glass-card p-8">
+          <form onSubmit={handleSubmit} className="bg-gray-900 p-8">
             {message && (
               <div className={`mb-6 p-4 border rounded-lg flex gap-3 ${message.type === 'success'
                 ? 'bg-green-500/10 border-green-500/30'
@@ -153,7 +153,7 @@ export default function ContactPage() {
             )}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="fullName" className="block text-foreground text-sm mb-2">
+                <label htmlFor="fullName" className="block text-champagne text-sm mb-2">
                   Full Name <span className="text-primary">*</span>
                 </label>
                 <input
@@ -163,12 +163,12 @@ export default function ContactPage() {
                   disabled={loading}
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                  className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                   placeholder="Your full name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-foreground text-sm mb-2">
+                <label htmlFor="email" className="block text-champagne text-sm mb-2">
                   Email <span className="text-primary">*</span>
                 </label>
                 <input
@@ -178,12 +178,12 @@ export default function ContactPage() {
                   disabled={loading}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                  className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                   placeholder="your@email.com"
                 />
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="phone" className="block text-foreground text-sm mb-2">
+                <label htmlFor="phone" className="block text-champagne text-sm mb-2">
                   Phone
                 </label>
                 <div className="flex gap-2">
@@ -195,7 +195,7 @@ export default function ContactPage() {
                     <SelectTrigger
                       id="phonePrefix"
                       aria-label="Country code"
-                      className="w-24 shrink-0 bg-background border border-primary/20 px-3 py-3 text-foreground focus:border-primary focus:ring-primary/20 disabled:opacity-50 [&>svg]:ml-0"
+                      className="w-24 shrink-0 bg-white/10 border border-champagne/20 px-3 py-3 text-champagne focus:border-primary focus:ring-primary/20 disabled:opacity-50 [&>svg]:ml-0"
                     >
                       {/* Chỉ hiển thị mã khi đã chọn */}
                       <span className="truncate">{formData.phonePrefix}</span>
@@ -219,14 +219,14 @@ export default function ContactPage() {
                       const filtered = isOther ? raw.replace(/[^\d+\s]/g, "").slice(0, 20) : raw.replace(/\D/g, "").slice(0, 15)
                       setFormData({ ...formData, phoneNumber: filtered })
                     }}
-                    className="flex-1 min-w-0 bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                    className="flex-1 min-w-0 bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
                     placeholder="412 345 678"
                   />
                 </div>
               </div>
             </div>
             <div className="mb-4">
-              <label htmlFor="subject" className="block text-foreground text-sm mb-2">
+              <label htmlFor="subject" className="block text-champagne text-sm mb-2">
                 Subject <span className="text-primary">*</span>
               </label>
               <select
@@ -235,7 +235,7 @@ export default function ContactPage() {
                 disabled={loading}
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
               >
                 {subjectOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -243,7 +243,7 @@ export default function ContactPage() {
               </select>
             </div>
             <div className="mb-6">
-              <label htmlFor="message" className="block text-foreground text-sm mb-2">
+              <label htmlFor="message" className="block text-champagne text-sm mb-2">
                 Message <span className="text-primary">*</span>
               </label>
               <textarea
@@ -253,7 +253,7 @@ export default function ContactPage() {
                 disabled={loading}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
+                className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
                 placeholder="How can we help you?"
               />
             </div>
@@ -269,39 +269,51 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-24 bg-secondary">
+      {/* <section className="py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-champagne">
               Contact Information
             </h2>
           </div>
-          <div className="flex justify-center">
-            <div className="glass-card p-8 text-center">
-              <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <Mail className="w-7 h-7 text-primary" strokeWidth={1.5} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((item) => (
+              <div
+                key={item.title}
+                className="bg-gray-900 border border-primary/20 p-8 text-center transition-colors hover:border-primary/40"
+              >
+                <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                  <item.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-champagne mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-champagne/60 text-sm mb-3">{item.subtitle}</p>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    className="text-primary hover:text-primary/80 text-sm break-all transition-colors"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-champagne/80 text-sm">{item.value}</p>
+                )}
               </div>
-              <h3 className="font-serif text-lg font-semibold text-champagne mb-1">
-                Email
-              </h3>
-              <p className="text-champagne/50 text-sm mb-3">General Inquiries</p>
-              <a href="mailto:info@aiffa.com.au" className="text-primary hover:underline text-sm break-all">
-                info@aiffa.com.au
-              </a>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Follow Us */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-black">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl font-bold text-champagne mb-6">
             Follow Us
           </h2>
           <div className="flex items-center justify-center gap-6 mb-6">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61588401630735"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -318,17 +330,31 @@ export default function ContactPage() {
             >
               <Instagram className="w-5 h-5" />
             </a>
+
             <a
-              href="https://twitter.com"
+                href="https://www.linkedin.com/company/arab-international-film-festival-of-australia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+            </a>
+
+
+            <a
+              href="https://www.youtube.com/channel/UCO2xJ6Cw1-5o1iolIJtO4yQ"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Twitter"
+              aria-label="Youtube"
             >
-              <Twitter className="w-5 h-5" />
+              <Youtube className="w-5 h-5" />
             </a>
+
+
           </div>
-          <p className="text-champagne/60 text-sm">
+          <p className="text-champagne/85 text-sm">
             Stay connected with us on social media for the latest festival updates, behind-the-scenes content, and Arab cinema news.
           </p>
         </div>

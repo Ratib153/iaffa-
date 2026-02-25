@@ -12,7 +12,7 @@ const sampleSchedule = Object.values(programDays).map((d) => ({
 
 export default function ProgramPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -24,7 +24,7 @@ export default function ProgramPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
@@ -37,7 +37,7 @@ export default function ProgramPage() {
       </section>
 
       {/* Festival Program */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
@@ -50,7 +50,7 @@ export default function ProgramPage() {
       </section>
 
       {/* Programme Approach */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne mb-6 text-center">
             Programme Approach
