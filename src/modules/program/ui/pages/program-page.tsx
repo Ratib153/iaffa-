@@ -30,7 +30,7 @@ export default function ProgramPage() {
           <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
             Program & Schedule
           </h1>
-          <p className="text-yellow-500 text-lg max-w-2xl mx-auto">
+          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
             Seven days of exceptional Arab cinema, workshops, panels, mentorship, and networking opportunities.
           </p>
         </div>

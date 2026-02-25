@@ -3,23 +3,26 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image";
 
 const navItems = [
   { label: "Programs", href: "/program" },
-  { label: "Submissions", href: "/submissions" },
   { label: "Prizes", href: "/prizes" },
+  { label: "About", href: "/about" },
+]
+
+const participateItems = [
+  { label: "Submissions", href: "/submissions" },
   { label: "Membership", href: "/membership" },
   { label: "Oman Partnership", href: "/oman-partnership" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -64,7 +67,7 @@ export function Navigation() {
       
       <div className="relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex h-16 items-center justify-end">
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation - Right aligned */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item) => {
               const isActive = pathname === item.href || pathname?.startsWith(item.href + "/")
@@ -94,6 +97,97 @@ export function Navigation() {
                 </Link>
               )
             })}
+            
+            {/* Participate Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <button
+                className={cn(
+                  "relative px-4 py-3 text-sm xl:text-base font-medium tracking-wide transition-all duration-300 group flex items-center gap-1",
+                  participateItems.some(item => pathname === item.href || pathname?.startsWith(item.href + "/"))
+                    ? "text-[#E6C15A]"
+                    : isScrolled
+                      ? "text-[#f7f2ed] hover:text-[#E6C15A]"
+                      : "text-[#f7f2ed] hover:text-[#E6C15A]"
+                )}
+              >
+                Get Involved
+                <ChevronDown 
+                  className={cn(
+                    "w-4 h-4 transition-transform duration-300",
+                    dropdownOpen && "rotate-180"
+                  )} 
+                />
+                {/* Animated underline */}
+                <span 
+                  className={cn(
+                    "absolute bottom-2 left-4 right-4 h-[2px] bg-gradient-to-r from-[#E6C15A] to-[#C9A84F] transition-all duration-300",
+                    participateItems.some(item => pathname === item.href || pathname?.startsWith(item.href + "/"))
+                      ? "opacity-100 scale-x-100" 
+                      : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+                  )}
+                />
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div
+                className={cn(
+                  "absolute top-full right-0 pt-2 w-56 transition-all duration-300",
+                  dropdownOpen 
+                    ? "opacity-100 visible translate-y-0" 
+                    : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                )}
+              >
+                <div className="bg-black/95 backdrop-blur-xl border border-[#E6C15A]/20 rounded-lg shadow-2xl overflow-hidden">
+                  <div className="py-2">
+                    {participateItems.map((item) => {
+                      const isActive = pathname === item.href || pathname?.startsWith(item.href + "/")
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={cn(
+                            "block px-4 py-3 text-sm font-medium tracking-wide transition-all duration-200",
+                            isActive
+                              ? "text-[#E6C15A] bg-[#E6C15A]/10 border-l-2 border-[#E6C15A]"
+                              : "text-gray-400 hover:text-[#E6C15A] hover:bg-[#E6C15A]/5 hover:border-l-2 hover:border-[#E6C15A]/50"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Contact - Last item */}
+            <Link
+              href="/contact"
+              className={cn(
+                "relative px-4 py-3 text-sm xl:text-base font-medium tracking-wide transition-all duration-300 group",
+                pathname === "/contact" || pathname?.startsWith("/contact/")
+                  ? "text-[#E6C15A]"
+                  : isScrolled
+                    ? "text-[#f7f2ed] hover:text-[#E6C15A]"
+                    : "text-[#f7f2ed] hover:text-[#E6C15A]"
+              )}
+            >
+              Contact
+              {/* Animated underline */}
+              <span 
+                className={cn(
+                  "absolute bottom-2 left-4 right-4 h-[2px] bg-gradient-to-r from-[#E6C15A] to-[#C9A84F] transition-all duration-300",
+                  pathname === "/contact" || pathname?.startsWith("/contact/")
+                    ? "opacity-100 scale-x-100" 
+                    : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+                )}
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -142,6 +236,31 @@ export function Navigation() {
               </Link>
             )
           })}
+          
+          {/* Mobile Get Involved Section */}
+          <div className="pt-2 mt-2 border-t border-[#E6C15A]/20">
+            <div className="px-4 py-2 text-xs font-semibold tracking-wider text-[#E6C15A]/70 uppercase">
+              Get Involved
+            </div>
+            {participateItems.map((item) => {
+              const isActive = pathname === item.href || pathname?.startsWith(item.href + "/")
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block px-4 py-3 text-base font-medium tracking-wide rounded-md transition-all duration-200",
+                    isActive
+                      ? "text-[#E6C15A] bg-[#E6C15A]/10 border-l-2 border-[#E6C15A]"
+                      : "text-champagne/80 hover:text-[#E6C15A] hover:bg-[#E6C15A]/5 hover:border-l-2 hover:border-[#E6C15A]/50"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </div>
     </nav>

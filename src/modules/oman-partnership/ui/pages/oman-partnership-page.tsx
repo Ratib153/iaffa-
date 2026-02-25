@@ -53,7 +53,7 @@ export default function OmanPartnershipPage() {
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
             Oman Partnership
           </h1>
-          <p className="text-champagne/90 text-lg max-w-2xl mx-auto">
+          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
             Connecting cultures through the universal language of cinema
           </p>
         </div>
