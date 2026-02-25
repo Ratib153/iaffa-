@@ -40,7 +40,7 @@ const featuredFilms = [
     title: "In The Red",
     director: "Dawan Nazad Majeed",
     country: "Iraq",
-    image: "/images/Films/In_The_Red.jpg",
+    image: "/images/Films/in_the_red.jpg",
   },
   {
     title: "Broken Whispers",
