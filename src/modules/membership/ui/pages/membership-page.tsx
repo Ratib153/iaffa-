@@ -52,10 +52,10 @@ export default function MembershipPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
             Join AIFFA Membership
           </h1>
-          <p className="text-champagne/90 text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
             Connect, Learn, and Celebrate Arab Cinema
           </p>
           <a
@@ -69,9 +69,9 @@ export default function MembershipPage() {
 
       {/* Benefits Section */}
       <section className="py-24 bg-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
               Why Become a Member?
             </h2>
           </div>
@@ -84,10 +84,10 @@ export default function MembershipPage() {
                 <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <benefit.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-champagne mb-1 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-lg font-semibold text-yellow-500 mb-1 group-hover:text-primary transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-champagne/85 text-sm">{benefit.subtitle}</p>
+                <p className="text-gray-400 text-sm">{benefit.subtitle}</p>
               </div>
             ))}
           </div>
@@ -96,12 +96,12 @@ export default function MembershipPage() {
 
       {/* Membership Form Section */}
       <section id="join" className="py-24 bg-black">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne mb-4">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500 mb-4">
               Membership
             </h2>
-            <p className="text-champagne/90">
+            <p className="text-gray-400">
               Fill out the form below to join our community
             </p>
           </div>
@@ -112,7 +112,7 @@ export default function MembershipPage() {
       {/* Support Section */}
       <section className="py-16 bg-black">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-champagne/85">
+          <p className="text-gray-400">
             Questions? Contact us at{" "}
             <a href="mailto:info@iaffa.com" className="text-primary hover:underline">
               info@aiffa.com.au

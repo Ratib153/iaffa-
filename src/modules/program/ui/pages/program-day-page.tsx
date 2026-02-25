@@ -30,15 +30,15 @@ export function ProgramDayPage({ day }: Props) {
 
           {/* Header */}
           <div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-4">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-4">
                 Day {data.day} – {data.title}
               </h1>
 
-              <p className="text-champagne/70 text-lg italic mb-6">
+              <p className="text-yellow-600 text-lg italic mb-6">
                 Focus: {data.focus}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 text-champagne/80">
+              <div className="flex flex-col sm:flex-row gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
                   <span className="font-medium">{data.date}</span>
@@ -60,14 +60,14 @@ export function ProgramDayPage({ day }: Props) {
 
             {/* Day Activities */}
             <section className="mb-12">
-              <h2 className="text-primary font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
+              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
                 Day Activities
               </h2>
               <ul className="space-y-4">
                 {data.dayActivities.map((item) => (
                   <li key={item} className="flex items-start gap-4">
                     <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-champagne/80 text-lg font-light leading-relaxed">
+                    <p className="text-gray-400 text-lg font-light leading-relaxed">
                       {item}
                     </p>
                   </li>
@@ -77,14 +77,14 @@ export function ProgramDayPage({ day }: Props) {
 
             {/* Evening Activities */}
             <section className="pt-12 border-t border-champagne/10">
-              <h2 className="text-primary font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
+              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
                 Evening Activities
               </h2>
               <ul className="space-y-4">
                 {data.eveningActivities.map((item) => (
                   <li key={item} className="flex items-start gap-4">
                     <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-champagne/80 text-lg font-light leading-relaxed">
+                    <p className="text-gray-400 text-lg font-light leading-relaxed">
                       {item}
                     </p>
                   </li>

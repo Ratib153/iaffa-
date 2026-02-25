@@ -3,7 +3,7 @@ import Image from "next/image"
 export function ExperienceCinemaSection() {
   return (
     <section className="py-24 bg-black"> {/*secondary*/}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -21,10 +21,10 @@ export function ExperienceCinemaSection() {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-primary tracking-[0.2em] uppercase text-sm">Discover</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne leading-tight">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500 leading-tight">
               Experience Arab Cinema
             </h2>
-            <div className="space-y-4 text-champagne/90 leading-relaxed">
+            <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
                 Join us for an unforgettable celebration of Arab storytelling. From thought-provoking documentaries to powerful dramas, our carefully curated program showcases the best of contemporary Arab cinema.
               </p>

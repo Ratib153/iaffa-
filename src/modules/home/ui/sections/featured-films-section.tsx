@@ -40,7 +40,7 @@ const featuredFilms = [
     title: "In The Red",
     director: "Dawan Nazad Majeed",
     country: "Iraq",
-    image: "/images/Films/in_the_red.jpg",
+    image: "/images/Films/In_the_red.jpg",
   },
   {
     title: "Broken Whispers",
@@ -122,11 +122,11 @@ export function FeaturedFilmsSection() {
       className="py-24 border-0" 
       style={{ border: 'none', boxShadow: 'none', marginTop: 0, backgroundColor: '#000000' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Now Showing</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500">
               Featured Films
             </h2>
           </div>

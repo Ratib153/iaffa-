@@ -36,10 +36,10 @@ const programs = [
 export function ProgramHighlightsSection() {
   return (
     <section className="py-24 bg-black"> {/*secondary*/}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="text-center mb-16">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">What We Offer</p>
-          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500">
             Program Highlights
           </h2>
         </div>
@@ -56,7 +56,7 @@ export function ProgramHighlightsSection() {
               <h3 className="font-libre-baskerville text-xl font-semibold text-gray-300 mb-4 group-hover:text-primary transition-colors">
                 {program.title} {/*champagne*/}
               </h3>
-              <p className="text-champagne/85 text-sm leading-relaxed">
+              <p className="text-yellow-500 text-sm leading-relaxed">
                 {program.description}
               </p>
             </div>

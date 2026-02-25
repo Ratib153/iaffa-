@@ -7,7 +7,7 @@ export default function InTheRedFilmPage() {
   return (
     <main className="min-h-screen w-full pt-12 bg-black">
       <div className="w-full bg-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-12">
           <div className="relative overflow-hidden rounded-lg shadow-2xl max-w-2xl mx-auto">
             <Image
               src="/images/Films/In_The_Red.jpg"
@@ -22,7 +22,7 @@ export default function InTheRedFilmPage() {
       </div>
 
       <div className="w-full bg-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <h1 className="text-4xl font-bold mb-4 text-champagne">In The Red</h1>

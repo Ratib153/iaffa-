@@ -9,7 +9,7 @@ export function HeroSection() {
         className="w-full pt-24 pb-8"
         style={{ background: "black", minHeight: "200px" }} 
       > {/*"linear-gradient(to bottom, #d8bca0 0%, #d8bca0 50%, #f7f2ed 100%)" */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 flex justify-center">
           <Image
             src="/images/aiffalogo-bg.png"  
             alt="AIFFA – Arab International Film Festival of Australia"
@@ -29,8 +29,7 @@ export function HeroSection() {
       > {/*"#f7f2ed"*/}
         <div className="max-w-[1400px] mx-auto px-6">
           <p
-            className="mb-3 text-left text-sm sm:text-base uppercase tracking-widest"
-            style={{ color: "#C9A84F" }}
+            className="mb-3 text-left text-sm sm:text-base uppercase tracking-widest text-yellow-500"
           >
             Experience a Gift for Life
           </p>
@@ -61,7 +60,7 @@ export function HeroSection() {
         className="w-full pt-12 py-10"
         style={{ backgroundColor: "#000000" }} 
       >{/*same as above color*/}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-center">
           <p className="font-libre-baskerville text-center text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-10" style={{ color: "#C9A84F" }}>
             AIFFA was established through a collaboration between the Oman Film Society and the
             International Film Festival of Australia (IFFA) to connect Omani and Arab filmmakers with
