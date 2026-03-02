@@ -157,7 +157,7 @@ export function FeaturedFilmsSection() {
           </div>
         </div>
 
-        {/* Continuous Scrolling Films */}
+        {/* Continuous Scrolling Films. */}
         <div 
           ref={scrollContainerRef}
           className="flex gap-6 overflow-x-auto scroll-smooth pb-4 hide-scrollbar film-carousel"
