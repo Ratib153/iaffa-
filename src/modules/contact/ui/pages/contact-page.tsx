@@ -65,6 +65,7 @@ export default function ContactPage() {
     subject: "General Inquiry",
     message: "",
   })
+  const [customSubject, setCustomSubject] = useState("")
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
 
@@ -79,11 +80,13 @@ export default function ContactPage() {
           ? formData.phoneNumber.replace(/\s/g, "")
           : `${formData.phonePrefix}${formData.phoneNumber.replace(/\D/g, "")}`
         : ""
+      const finalSubject = formData.subject === "Other" ? customSubject : formData.subject
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
+          subject: finalSubject,
           phone,
         }),
       })
@@ -91,6 +94,7 @@ export default function ContactPage() {
       if (response.ok) {
         setMessage({ type: 'success', text: 'Message sent successfully! We\'ll get back to you soon.' })
         setFormData({ fullName: "", email: "", phonePrefix: "+61", phoneNumber: "", subject: "General Inquiry", message: "" })
+        setCustomSubject("")
       } else {
         setMessage({ type: 'error', text: data.error || 'Failed to send message' })
       }
@@ -234,13 +238,32 @@ export default function ContactPage() {
                 required
                 disabled={loading}
                 value={formData.subject}
-                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                onChange={(e) => {
+                  setFormData({ ...formData, subject: e.target.value })
+                  if (e.target.value !== "Other") {
+                    setCustomSubject("")
+                  }
+                }}
                 className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
               >
                 {subjectOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
                 ))}
               </select>
+              {formData.subject === "Other" && (
+                <div className="mt-3">
+                  <input
+                    type="text"
+                    id="customSubject"
+                    required
+                    disabled={loading}
+                    value={customSubject}
+                    onChange={(e) => setCustomSubject(e.target.value)}
+                    className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+                    placeholder="Please specify your subject"
+                  />
+                </div>
+              )}
             </div>
             <div className="mb-6">
               <label htmlFor="message" className="block text-yellow-500 text-sm mb-2">
