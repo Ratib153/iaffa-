@@ -70,11 +70,11 @@ const prizes = [
 
 export function PrizeCategoriesSection() {
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-black">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="text-center mb-16">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Recognition</p>
-          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500">
             Prize Categories
           </h2>
         </div>
@@ -88,7 +88,7 @@ export function PrizeCategoriesSection() {
               <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                 {prize.icon}
               </div>
-              <h3 className="font-libre-baskerville text-sm sm:text-base text-center text-champagne group-hover:text-primary transition-colors">
+              <h3 className="font-libre-baskerville text-sm sm:text-base text-center text-gray-400 group-hover:text-primary transition-colors">
                 {prize.title}
               </h3>
             </div>

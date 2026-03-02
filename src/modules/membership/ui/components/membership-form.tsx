@@ -72,7 +72,7 @@ export function MembershipForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass-card p-8">
+    <form onSubmit={handleSubmit} className="bg-gray-900 p-8">
       {message && (
         <div className={`mb-6 p-4 border rounded-lg flex gap-3 ${message.type === 'success'
             ? 'bg-green-500/10 border-green-500/30'
@@ -90,7 +90,7 @@ export function MembershipForm() {
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
-          <label htmlFor="fullName" className="block text-foreground text-sm mb-2">
+          <label htmlFor="fullName" className="block text-yellow-500 text-sm mb-2">
             Full Name <span className="text-primary">*</span>
           </label>
           <input
@@ -100,12 +100,12 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.fullName}
             onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="Enter your full name"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-foreground text-sm mb-2">
+          <label htmlFor="email" className="block text-yellow-500 text-sm mb-2">
             Email Address <span className="text-primary">*</span>
           </label>
           <input
@@ -115,12 +115,12 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="your@email.com"
           />
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="phone" className="block text-foreground text-sm mb-2">
+          <label htmlFor="phone" className="block text-yellow-500 text-sm mb-2">
             Phone <span className="text-primary">*</span>
           </label>
           <div className="flex gap-2">
@@ -132,7 +132,7 @@ export function MembershipForm() {
               <SelectTrigger
                 id="phonePrefix"
                 aria-label="Country code"
-                className="w-24 shrink-0 bg-background border border-primary/20 px-3 py-3 text-foreground focus:border-primary focus:ring-primary/20 disabled:opacity-50 [&>svg]:ml-0"
+                className="w-24 shrink-0 bg-white/10 border border-champagne/20 px-3 py-3 text-champagne focus:border-primary focus:ring-primary/20 disabled:opacity-50 [&>svg]:ml-0"
               >
                 <span className="truncate">{formData.phonePrefix}</span>
               </SelectTrigger>
@@ -156,13 +156,13 @@ export function MembershipForm() {
                 const filtered = isOther ? raw.replace(/[^\d+\s]/g, "").slice(0, 20) : raw.replace(/\D/g, "").slice(0, 15)
                 setFormData({ ...formData, phoneNumber: filtered })
               }}
-              className="flex-1 min-w-0 bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+              className="flex-1 min-w-0 bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
               placeholder="412 345 678"
             />
           </div>
         </div>
         <div>
-          <label htmlFor="country" className="block text-foreground text-sm mb-2">
+          <label htmlFor="country" className="block text-yellow-500 text-sm mb-2">
             Country <span className="text-primary">*</span>
           </label>
           <select
@@ -171,16 +171,16 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.country}
             onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
           >
-            <option value="">Select country</option>
+            <option value="" className="bg-gray-900">Select country</option>
             {countryOptions.map((c) => (
-              <option key={c.value} value={c.value}>{c.label}</option>
+              <option key={c.value} value={c.value} className="bg-gray-900">{c.label}</option>
             ))}
           </select>
         </div>
         <div>
-          <label htmlFor="membershipType" className="block text-foreground text-sm mb-2">
+          <label htmlFor="membershipType" className="block text-yellow-500 text-sm mb-2">
             Membership Type <span className="text-primary">*</span>
           </label>
           <select
@@ -189,15 +189,15 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.membershipType}
             onChange={(e) => setFormData({ ...formData, membershipType: e.target.value })}
-            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
           >
             {membershipTypes.map((type) => (
-              <option key={type} value={type}>{type}</option>
+              <option key={type} value={type} className="bg-gray-900">{type}</option>
             ))}
           </select>
         </div>
         <div>
-          <label htmlFor="organization" className="block text-foreground text-sm mb-2">
+          <label htmlFor="organization" className="block text-yellow-500 text-sm mb-2">
             Organization / Institution
           </label>
           <input
@@ -206,13 +206,13 @@ export function MembershipForm() {
             disabled={loading}
             value={formData.organization}
             onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-            className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
+            className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors disabled:opacity-50"
             placeholder="Enter organization name"
           />
         </div>
       </div>
       <div className="mb-6">
-        <label htmlFor="message" className="block text-foreground text-sm mb-2">
+        <label htmlFor="message" className="block text-yellow-500 text-sm mb-2">
           Message (Optional)
         </label>
         <textarea
@@ -221,7 +221,7 @@ export function MembershipForm() {
           disabled={loading}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full bg-background border border-primary/20 px-4 py-3 text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
+          className="w-full bg-white/10 border border-champagne/20 px-4 py-3 text-champagne placeholder-champagne/50 focus:border-primary focus:outline-none transition-colors resize-none disabled:opacity-50"
           placeholder="Tell us about yourself"
         />
       </div>

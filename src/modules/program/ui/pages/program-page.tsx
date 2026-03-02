@@ -12,10 +12,10 @@ const sampleSchedule = Object.values(programDays).map((d) => ({
 
 export default function ProgramPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-32  overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-cinema.jpg"
@@ -24,23 +24,23 @@ export default function ProgramPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
+          <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
             Program & Schedule
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
+          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
             Seven days of exceptional Arab cinema, workshops, panels, mentorship, and networking opportunities.
           </p>
         </div>
       </section>
 
       {/* Festival Program */}
-      <section className="py-24 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-black">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-16">
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-gray-400">
               Festival Program
             </h2>
           </div>
@@ -50,12 +50,12 @@ export default function ProgramPage() {
       </section>
 
       {/* Programme Approach */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-champagne mb-6 text-center">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500 mb-6 text-center">
             Programme Approach
           </h2>
-          <p className="text-champagne/70 leading-relaxed text-center">
+          <p className="text-gray-400 leading-relaxed text-center">
             The Arab International Film Festival of Australia's programme is designed to guide participants from learning and mentorship into collaboration and real-world production. By integrating curated screenings, industry engagement, and hands-on filmmaking, AIFFA creates a structured pathway that supports creative growth, professional readiness, and long-term career sustainability for Arab filmmakers.
           </p>
         </div>

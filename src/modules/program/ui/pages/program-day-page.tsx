@@ -14,10 +14,10 @@ export function ProgramDayPage({ day }: Props) {
   if (!data) return null
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
@@ -30,15 +30,15 @@ export function ProgramDayPage({ day }: Props) {
 
           {/* Header */}
           <div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-4">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-4">
                 Day {data.day} – {data.title}
               </h1>
 
-              <p className="text-champagne/70 text-lg italic mb-6">
+              <p className="text-yellow-600 text-lg italic mb-6">
                 Focus: {data.focus}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 text-champagne/80">
+              <div className="flex flex-col sm:flex-row gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
                   <span className="font-medium">{data.date}</span>
@@ -54,20 +54,20 @@ export function ProgramDayPage({ day }: Props) {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-card p-8 lg:p-12">
+          <div className="bg-gray-900 p-8 lg:p-12">
 
             {/* Day Activities */}
             <section className="mb-12">
-              <h2 className="text-primary font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
+              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
                 Day Activities
               </h2>
               <ul className="space-y-4">
                 {data.dayActivities.map((item) => (
                   <li key={item} className="flex items-start gap-4">
                     <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-champagne/80 text-lg font-light leading-relaxed">
+                    <p className="text-gray-400 text-lg font-light leading-relaxed">
                       {item}
                     </p>
                   </li>
@@ -77,14 +77,14 @@ export function ProgramDayPage({ day }: Props) {
 
             {/* Evening Activities */}
             <section className="pt-12 border-t border-champagne/10">
-              <h2 className="text-primary font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
+              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
                 Evening Activities
               </h2>
               <ul className="space-y-4">
                 {data.eveningActivities.map((item) => (
                   <li key={item} className="flex items-start gap-4">
                     <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-champagne/80 text-lg font-light leading-relaxed">
+                    <p className="text-gray-400 text-lg font-light leading-relaxed">
                       {item}
                     </p>
                   </li>

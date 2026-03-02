@@ -85,7 +85,7 @@ const juryPanel = [
 export default function PrizesPage() {
   const router = useRouter()
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-2 overflow-hidden">
@@ -97,23 +97,23 @@ export default function PrizesPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-champagne mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
             Prizes
           </h1>
-          <p className="text-champagne/70 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Celebrating excellence in Arab cinema
           </p>
         </div>
       </section>
 
       {/* Prize Categories */}
-      <section className="py-24 bg-secondary">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-black">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-champagne">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
               Prize Categories
             </h2>
           </div>
@@ -130,7 +130,7 @@ export default function PrizesPage() {
                     router.push(`/prizes/${prize.slug}`)
                   }
                 }}
-                className="glass-card p-8 sm:p-10 hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
+                className="bg-gray-900 p-8 sm:p-10 hover:border-primary/30 transition-colors duration-300 group cursor-pointer block"
               >
                 <div className="flex items-start gap-5">
                   <div className="text-primary shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300">
@@ -138,14 +138,14 @@ export default function PrizesPage() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="font-serif text-2xl font-semibold text-champagne mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="font-serif text-2xl font-semibold text-yellow-500 mb-1 group-hover:text-primary transition-colors">
                       {prize.title}
                     </h3>
 
-                    <p className="text-champagne/60 text-sm mb-5">{prize.description}</p>
+                    <p className="text-gray-400 text-sm mb-5">{prize.description}</p>
 
                     <div className="flex items-center justify-between mb-3">
-                      <p className="text-champagne/80 font-medium">Winner Benefits</p>
+                      <p className="text-gray-400 font-medium">Winner Benefits</p>
 
                       {/* This acts like internal "View details" link without nesting anchors */}
                       <button
@@ -161,7 +161,7 @@ export default function PrizesPage() {
                     </div>
 
                     {prize.benefits?.length ? (
-                      <ul className="space-y-2 text-champagne/70 text-sm leading-relaxed">
+                      <ul className="space-y-2 text-gray-400 text-sm leading-relaxed">
                         {prize.benefits.map((b) => {
                           const label = typeof b === "string" ? b : b.label
                           const href = typeof b === "string" ? undefined : b.href
@@ -176,7 +176,7 @@ export default function PrizesPage() {
                                   target="_blank"
                                   rel="noreferrer"
                                   onClick={(e) => e.stopPropagation()}
-                                  className="text-champagne/70 underline underline-offset-4 decoration-champagne/30 hover:text-primary hover:decoration-primary/60 transition-colors"
+                                  className="text-gray-400 underline underline-offset-4 decoration-gray-400/30 hover:text-primary hover:decoration-primary/60 transition-colors"
                                 >
                                   {label}
                                 </a>
@@ -188,7 +188,7 @@ export default function PrizesPage() {
                         })}
                       </ul>
                     ) : (
-                      <p className="text-champagne/60 text-sm">Click to view details.</p>
+                      <p className="text-gray-400 text-sm">Click to view details.</p>
                     )}
                   </div>
                 </div>
@@ -200,9 +200,9 @@ export default function PrizesPage() {
       </section>
 
       {/* Overview */}
-      <section className="pt-2 pb-24 bg-background flex items-center min-h-[400px]">
+      <section className="pt-2 pb-24 bg-black flex items-center min-h-[400px]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <p className="text-champagne/70 leading-relaxed text-center">
+          <p className="text-gray-400 leading-relaxed text-center">
             The International Arab Film Festival of Australia recognizes outstanding achievements in filmmaking through our annual awards ceremony. Our awards celebrate the artistry, innovation, and cultural significance of Arab cinema, honoring filmmakers who push boundaries and tell compelling stories that resonate with audiences worldwide.
           </p>
         </div>

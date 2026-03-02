@@ -2,17 +2,17 @@ import Link from "next/link"
 
 export function BePartSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-black">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Join Us</p>
-        <h2 className="font-libre-baskerville text-3xl sm:text-4xl lg:text-5xl font-bold text-champagne leading-tight mb-6">
+        <h2 className="font-libre-baskerville text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-500 leading-tight mb-6">
           Be Part of the Story
         </h2>
-        <p className="text-champagne/70 text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
           Whether you&apos;re a filmmaker looking to showcase your work or a cinema lover eager to explore new perspectives, the International Arab Film Festival of Australia welcomes you.
         </p>
 
