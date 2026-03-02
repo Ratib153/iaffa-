@@ -6,37 +6,37 @@ const team = [
     name: "Amira El-Sayed",
     role: "Festival Director",
     bio: "Film curator with 15 years of experience in international cinema.",
-    image: "/images/team-1.jpg",
+    image: "/images/team-1.webp",
   },
   {
     name: "Hassan Mansour",
     role: "Program Director",
     bio: "Award-winning filmmaker and programming specialist.",
-    image: "/images/team-2.jpg",
+    image: "/images/team-2.webp",
   },
   {
     name: "Leila Khoury",
     role: "Industry Coordinator",
     bio: "Film industry professional with expertise in Arab cinema.",
-    image: "/images/team-3.jpg",
+    image: "/images/team-3.webp",
   },
   {
     name: "Omar Badawi",
     role: "Marketing Director",
     bio: "Communications expert passionate about cultural storytelling.",
-    image: "/images/team-1.jpg",
+    image: "/images/team-1.webp",
   },
   {
     name: "Yasmin Farah",
     role: "Community Liaison",
     bio: "Building bridges between communities through film.",
-    image: "/images/team-3.jpg",
+    image: "/images/team-3.webp",
   },
   {
     name: "Karim Rashid",
     role: "Technical Director",
     bio: "Cinema technology specialist ensuring perfect screenings.",
-    image: "/images/team-2.jpg",
+    image: "/images/team-2.webp",
   },
 ]
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-cinema.jpg"
+            src="/images/hero-cinema.webp"
             alt="Cinema interior"
             fill
             className="object-cover opacity-20"
@@ -240,7 +240,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/arab-culture.jpg"
+                src="/images/arab-culture.webp"
                 alt="Arab cultural heritage"
                 fill
                 className="object-cover"
@@ -262,14 +262,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
               <div key={member.name} className="text-center">
-                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary/30">
+                {/* <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary/30"> */}
                   {/* <Image
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     fill
                     className="object-cover"
                   /> */}
-                </div>
+                {/* </div> */}
                 <h3 className="font-serif text-xl font-semibold text-yellow-500 mb-1">
                   {member.name}
                 </h3>

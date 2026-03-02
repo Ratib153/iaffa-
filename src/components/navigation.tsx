@@ -56,7 +56,7 @@ export function Navigation() {
         )}
       >
         <Image
-          src="/images/aiffalogo-bg.png"
+          src="/images/aiffalogo-bg.webp"
           alt="AIFFA Logo"
           width={120} 
           height={40} 

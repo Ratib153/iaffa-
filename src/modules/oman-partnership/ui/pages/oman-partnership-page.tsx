@@ -41,7 +41,7 @@ export default function OmanPartnershipPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/oman-australia.jpg"
+            src="/images/oman-australia.webp"
             alt="Oman and Australia landscapes"
             fill
             className="object-cover opacity-30"
@@ -94,7 +94,7 @@ export default function OmanPartnershipPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative aspect-[4/3] overflow-hidden order-2 lg:order-1">
               <Image
-                src="/images/gala-event.jpg"
+                src="/images/gala-event.webp"
                 alt="Film masterclass"
                 fill
                 className="object-cover"
@@ -176,14 +176,14 @@ export default function OmanPartnershipPage() {
           </p>
           <div className="flex items-center justify-center gap-12">
             <Image
-              src="/images/IFFA_logo.png"
+              src="/images/IFFA_logo.webp"
               alt="IFFA Logo"
               width={200}
               height={100}
               className="h-24 w-auto object-contain"
             />
             <Image
-              src="/images/oman_nobg.png"
+              src="/images/oman_nobg.webp"
               alt="Oman Film Society Logo"
               width={200}
               height={100}

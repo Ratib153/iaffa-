@@ -18,7 +18,7 @@ export default function ProgramPage() {
       <section className="relative pt-32  overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-cinema.jpg"
+            src="/images/hero-cinema.webp"
             alt="Theater interior"
             fill
             className="object-cover opacity-20"

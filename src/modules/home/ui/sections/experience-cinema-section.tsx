@@ -8,7 +8,7 @@ export function ExperienceCinemaSection() {
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/images/cinema.jpg"
+              src="/images/cinema.webp"
               alt="Cinema experience"
               fill
               className="object-cover"

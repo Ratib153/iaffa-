@@ -113,7 +113,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/gala-event.jpg"
+            src="/images/gala-event.webp"
             alt="Theater audience"
             fill
             className="object-cover opacity-20"

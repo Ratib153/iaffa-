@@ -43,7 +43,7 @@ export default function MembershipPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/gala-event.jpg"
+            src="/images/gala-event.webp"
             alt="Festival gala"
             fill
             className="object-cover opacity-70"

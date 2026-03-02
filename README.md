@@ -131,3 +131,57 @@ export default function Page() {
 - **Maintainability** - Clear structure makes code easier to navigate
 - **No UI changes** - All styling and components remain exactly as before
 
+## Hero Video HLS Conversion (macOS/Linux)
+
+Use the helper script to convert hero MP4 files into adaptive HLS outputs.
+
+### Script Location
+- `public/videos/convert-hero-to-hls.sh`
+
+### Prerequisite
+- FFmpeg installed and available in `PATH`
+  - macOS: `brew install ffmpeg`
+
+### Usage
+
+Run from the folder that contains the source hero MP4 files.
+
+```bash
+cd public/videos
+./convert-hero-to-hls.sh
+```
+
+Single file mode:
+
+```bash
+./convert-hero-to-hls.sh 1
+./convert-hero-to-hls.sh 2
+./convert-hero-to-hls.sh 3
+```
+
+### What it does
+- Converts each input into HLS renditions:
+  - 1080p (`5000k`, `1920x1080`)
+  - 720p (`2800k`, `1280x720`)
+  - 480p (`1400k`, `854x480`)
+- Uses `libx264` video + `aac` audio
+- HLS settings: `hls_time 6`, VOD playlists, `+faststart`
+- Creates output directory per file: `hero-X-hls/`
+- Generates variant playlists and master playlist:
+  - `hero-X-hls/hero-X-1080p.m3u8`
+  - `hero-X-hls/hero-X-720p.m3u8`
+  - `hero-X-hls/hero-X-480p.m3u8`
+  - `hero-X-hls/hero-X.m3u8` (master)
+
+### Output Location Example
+- If run inside `public/videos/Home/`, outputs are ready in:
+  - `public/videos/Home/hero-1-hls/`
+  - `public/videos/Home/hero-2-hls/`
+  - `public/videos/Home/hero-3-hls/`
+
+### Error Handling
+- Exits with error if:
+  - FFmpeg is not installed
+  - target input file is missing
+  - no matching `hero-*.mp4` files are found in batch mode
+

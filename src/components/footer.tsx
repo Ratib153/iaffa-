@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <Image
-              src="/images/aiffalogo-bg.png"
+              src="/images/aiffalogo-bg.webp"
               alt="AIFFA logo"
               width={140}
               height={40}

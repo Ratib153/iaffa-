@@ -68,7 +68,7 @@ export default function SubmissionsPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/film-set.jpg"
+            src="/images/film-set.webp"
             alt="Professional film set"
             fill
             className="object-cover opacity-60"
@@ -104,7 +104,7 @@ export default function SubmissionsPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/film-set.jpg"
+                src="/images/film-set.webp"
                 alt="Film production"
                 fill
                 className="object-cover"

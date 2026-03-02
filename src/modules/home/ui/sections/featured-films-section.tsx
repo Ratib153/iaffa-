@@ -10,49 +10,49 @@ const featuredFilms = [
     title: "The Turtle",
     director: "Nouf Saad",
     country: "Saudi Arabia",
-    image: "/images/Films/The_Turtle.jpg",
+    image: "/images/Films/The_Turtle.webp",
   },
   {
     title: "Under Occupation",
     director: "Anas Yahya",
     country: "Jordan",
-    image: "/images/Films/Under_Occupation.png",
+    image: "/images/Films/Under_Occupation.webp",
   },
   {
     title: "Free Will",
     director: "Ghiya Rushidat",
     country: "United Arab Emirates",
-    image: "/images/Films/Free_Will.jpg",
+    image: "/images/Films/Free_Will.webp",
   },
   {
     title: "Sea Of Hope",
     director: "Jubrail Abubaker Rahman",
     country: "Iraq",
-    image: "/images/Films/SEA_OF_HOPE.jpg",
+    image: "/images/Films/SEA_OF_HOPE.webp",
   },
   {
     title: "The Smell Of Henna",
     director: "Louay Rezgui",
     country: "Tunisia",
-    image: "/images/Films/The_Smell_Of_Henna.jpg",
+    image: "/images/Films/The_Smell_Of_Henna.webp",
   },
   {
     title: "In The Red",
     director: "Dawan Nazad Majeed",
     country: "Iraq",
-    image: "/images/Films/In_the_red.jpg",
+    image: "/images/Films/In_the_red.webp",
   },
   {
     title: "Broken Whispers",
     director: "Amir Athar Soheili, Amir Masoud Soheili",
     country: "Iran",
-    image: "/images/Films/Broken_Whispers.jpg",
+    image: "/images/Films/Broken_Whispers.webp",
   },
   {
     title: "An Almost Ordinary Day",
     director: "Slim Belhiba",
     country: "Tunisia",
-    image: "/images/Films/An_almost_ordinary_day .jpg",
+    image: "/images/Films/An_almost_ordinary_day .webp",
   }
 ]
 

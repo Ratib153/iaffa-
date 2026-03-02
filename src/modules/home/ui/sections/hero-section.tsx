@@ -11,7 +11,7 @@ export function HeroSection() {
       > {/*"linear-gradient(to bottom, #d8bca0 0%, #d8bca0 50%, #f7f2ed 100%)" */}
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 flex justify-center">
           <Image
-            src="/images/aiffalogo-bg.png"  
+            src="/images/aiffalogo-bg.webp"  
             alt="AIFFA – Arab International Film Festival of Australia"
             width={520}
             height={100}

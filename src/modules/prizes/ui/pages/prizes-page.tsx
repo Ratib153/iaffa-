@@ -66,19 +66,19 @@ const juryPanel = [
     name: "Amira El-Sayed",
     role: "Festival Director & Jury Chair",
     bio: "Film curator with 15 years of experience in international cinema.",
-    image: "/images/team-1.jpg",
+    image: "/images/team-1.webp",
   },
   {
     name: "Hassan Mansour",
     role: "Award-Winning Filmmaker",
     bio: "Director of multiple acclaimed Arab films.",
-    image: "/images/team-2.jpg",
+    image: "/images/team-2.webp",
   },
   {
     name: "Leila Khoury",
     role: "Film Critic & Scholar",
     bio: "Expert in Arab cinema and cultural studies.",
-    image: "/images/team-3.jpg",
+    image: "/images/team-3.webp",
   },
 ]
 
@@ -91,7 +91,7 @@ export default function PrizesPage() {
       <section className="relative pt-32 pb-2 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/ceremony-1.jpg"
+            src="/images/ceremony-1.webp"
             alt="Awards ceremony"
             fill
             className="object-cover opacity-20"
