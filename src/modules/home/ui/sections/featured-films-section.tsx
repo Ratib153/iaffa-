@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 const featuredFilms = [
@@ -11,48 +11,56 @@ const featuredFilms = [
     director: "Nouf Saad",
     country: "Saudi Arabia",
     image: "/images/Films/The_Turtle.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "Under Occupation",
     director: "Anas Yahya",
     country: "Jordan",
     image: "/images/Films/Under_Occupation.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "Free Will",
     director: "Ghiya Rushidat",
     country: "United Arab Emirates",
     image: "/images/Films/Free_Will.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "Sea Of Hope",
     director: "Jubrail Abubaker Rahman",
     country: "Iraq",
     image: "/images/Films/SEA_OF_HOPE.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "The Smell Of Henna",
     director: "Louay Rezgui",
     country: "Tunisia",
     image: "/images/Films/The_Smell_Of_Henna.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "In The Red",
     director: "Dawan Nazad Majeed",
     country: "Iraq",
     image: "/images/Films/In_the_red.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "Broken Whispers",
     director: "Amir Athar Soheili, Amir Masoud Soheili",
     country: "Iran",
     image: "/images/Films/Broken_Whispers.webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   },
   {
     title: "An Almost Ordinary Day",
     director: "Slim Belhiba",
     country: "Tunisia",
     image: "/images/Films/An_almost_ordinary_day .webp",
+    trailerUrl: "https://www.youtube.com/watch?v=",
   }
 ]
 
@@ -102,7 +110,7 @@ export function FeaturedFilmsSection() {
       }
       autoPlayTimeoutRef.current = setTimeout(() => {
         setIsAutoPlay(true)
-      }, 6000)
+      }, 2000)
     }
   }
 
@@ -149,10 +157,10 @@ export function FeaturedFilmsSection() {
           </div>
         </div>
 
-        {/* Continuous Scrolling Films */}
+        {/* Continuous Scrolling Films. */}
         <div 
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 hide-scrollbar"
+          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 hide-scrollbar film-carousel"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           style={{
@@ -167,7 +175,7 @@ export function FeaturedFilmsSection() {
             return (
               <div
                 key={`${film.title}-${idx}`}
-                className="group flex-shrink-0 w-64 animate-fade-in"
+                className="group flex-shrink-0 w-64 animate-fade-in slide-card transition-all duration-300"
                 style={{
                   animation: `fadeInScale 0.6s ease-out ${idx * 0.1}s both`,
                   scrollSnapAlign: 'start',
@@ -199,7 +207,19 @@ export function FeaturedFilmsSection() {
                         {film.title}
                       </h3>
                       <p className="text-primary text-sm line-clamp-1">Dir. {film.director}</p>
-                      <p className="text-primary text-sm">{film.country}</p>
+                      <p className="text-primary text-sm mb-3">{film.country}</p>
+                      
+                      {/* Trailer Button */}
+                      <a
+                        href={film.trailerUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 px-3 py-1 bg-primary/80 hover:bg-primary text-black rounded-full text-xs font-medium transition-colors duration-300"
+                      >
+                        <Play className="w-4 h-4 fill-black" />
+                        Trailer
+                      </a>
                     </div>
                   </div>
                 </Link>
@@ -246,9 +266,31 @@ export function FeaturedFilmsSection() {
             transform: scale(1);
           }
         }
+
+        @keyframes slideFromLeft {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
         
         .animate-fade-in {
           animation: fadeInScale 0.6s ease-out forwards;
+        }
+
+        .slide-card {
+          animation: slideFromLeft 0.6s ease-out forwards;
+          filter: brightness(1);
+        }
+
+        .film-carousel:has(.group:hover) .slide-card:not(:hover) {
+          filter: brightness(0.6);
+        }
+
+        .slide-card:hover {
+          filter: brightness(1.2);
         }
 
         .hide-scrollbar {
