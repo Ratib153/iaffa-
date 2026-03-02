@@ -48,6 +48,8 @@ export default function SubmissionsForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
   const [submitError, setSubmitError] = useState('')
+  const [customCategory, setCustomCategory] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
 
   const { register, control, handleSubmit, formState: { errors } } = useForm<SubmissionFormData>({
     defaultValues: {
@@ -91,10 +93,14 @@ export default function SubmissionsForm() {
     setSubmitMessage('')
 
     try {
+      const finalCategory = data.category === 'other' ? customCategory : data.category
       const response = await fetch('/api/submit-film', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          category: finalCategory,
+        }),
       })
 
       if (!response.ok) {
@@ -104,6 +110,8 @@ export default function SubmissionsForm() {
 
       setSubmitMessage('✓ Your submission has been received!')
       setTimeout(() => setSubmitMessage(''), 5000)
+      setCustomCategory('')
+      setSelectedCategory('')
     } catch (error) {
       setSubmitError(`✗ ${error instanceof Error ? error.message : 'Submission failed'}`)
     } finally {
@@ -202,6 +210,13 @@ export default function SubmissionsForm() {
                   </label>
                   <select
                     {...register('category', { required: 'Category is required' })}
+                    onChange={(e) => {
+                      register('category').onChange(e)
+                      setSelectedCategory(e.target.value)
+                      if (e.target.value !== 'other') {
+                        setCustomCategory('')
+                      }
+                    }}
                     className="w-full px-4 py-3 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                   >
                     <option value="">Select a category</option>
@@ -215,6 +230,24 @@ export default function SubmissionsForm() {
                   </select>
                   {errors.category && <p className="text-red-400 text-xs mt-1">{errors.category.message}</p>}
                 </div>
+
+                {/* Custom Category Input - appears when Other is selected */}
+                {selectedCategory === 'other' && (
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      Please specify category <span className="text-primary">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      disabled={isSubmitting}
+                      value={customCategory}
+                      onChange={(e) => setCustomCategory(e.target.value)}
+                      className="w-full px-4 py-3 bg-white/10 border border-champagne/20 rounded-lg text-champagne placeholder-champagne/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                      placeholder="Enter your film category"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label className="block text-sm font-medium text-yellow-500 mb-2">Genre(s)</label>
