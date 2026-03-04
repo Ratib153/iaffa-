@@ -13,6 +13,20 @@ export function ProgramDayPage({ day }: Props) {
 
   if (!data) return null
 
+  type ContentBlock =
+    | {
+        type: "activities"
+        title?: string
+        items: readonly string[]
+      }
+    | {
+        type: "text"
+        heading: string
+        text: string
+      }
+
+  const contentBlocks = data.content as readonly ContentBlock[]
+
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -30,11 +44,11 @@ export function ProgramDayPage({ day }: Props) {
 
           {/* Header */}
           <div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-4">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-4">
                 Day {data.day} – {data.title}
               </h1>
 
-              <p className="text-yellow-600 text-lg italic mb-6">
+              <p className="text-[#c18f2c] text-lg italic mb-6">
                 Focus: {data.focus}
               </p>
 
@@ -54,43 +68,37 @@ export function ProgramDayPage({ day }: Props) {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-black">
+      <section className="bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-900 p-8 lg:p-12">
 
-            {/* Day Activities */}
-            <section className="mb-12">
-              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
-                Day Activities
-              </h2>
-              <ul className="space-y-4">
-                {data.dayActivities.map((item) => (
-                  <li key={item} className="flex items-start gap-4">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-gray-400 text-lg font-light leading-relaxed">
-                      {item}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {contentBlocks.map((block, index) => {
+              if (block.type === "activities") {
+                return (
+                  <section key={`activities-${index}`} className="mb-12">
+                    <h2 className="text-[#c18f2c] font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
+                      {block.title ?? "Activities"}
+                    </h2>
+                      {block.items.map((item) => (
+                        <p key={item} className="text-[#c18f2c] text-lg font-light leading-relaxed mb-4">
+                          {item}
+                        </p>
+                      ))}
+                  </section>
+                )
+              }
 
-            {/* Evening Activities */}
-            <section className="pt-12 border-t border-champagne/10">
-              <h2 className="text-yellow-500 font-serif text-2xl font-semibold uppercase tracking-wider mb-8">
-                Evening Activities
-              </h2>
-              <ul className="space-y-4">
-                {data.eveningActivities.map((item) => (
-                  <li key={item} className="flex items-start gap-4">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0" />
-                    <p className="text-gray-400 text-lg font-light leading-relaxed">
-                      {item}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </section>
+              return (
+                <section key={`text-${index}`} className="mb-12">
+                  <h2 className="text-[#c18f2c] font-serif text-2xl font-semibold uppercase tracking-wider mb-6">
+                    {block.heading}
+                  </h2>
+                  <p className="text-gray-400 text-lg font-light leading-relaxed">
+                    {block.text}
+                  </p>
+                </section>
+              )
+            })}
 
             {/* CTA */}
             <div className="mt-12 pt-8 border-t border-champagne/10">

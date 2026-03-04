@@ -6,8 +6,6 @@ const sampleSchedule = Object.values(programDays).map((d) => ({
   day: d.day,
   title: d.title,
   focus: d.focus,
-  dayActivities: d.dayActivities,
-  eveningActivities: d.eveningActivities,
 }))
 
 export default function ProgramPage() {
@@ -21,16 +19,16 @@ export default function ProgramPage() {
             src="/images/hero-cinema.webp"
             alt="Theater interior"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-90"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-libre-baskerville text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             Program & Schedule
           </h1>
-          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#c18f2c] text-lg max-w-2xl mx-auto">
             Seven days of exceptional Arab cinema, workshops, panels, mentorship, and networking opportunities.
           </p>
         </div>
@@ -52,9 +50,10 @@ export default function ProgramPage() {
       {/* Programme Approach */}
       <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500 mb-6 text-center">
+          <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-[#c18f2c] mb-6 text-center">
             Programme Approach
           </h2>
+          
           <p className="text-gray-400 leading-relaxed text-center">
             The Arab International Film Festival of Australia's programme is designed to guide participants from learning and mentorship into collaboration and real-world production. By integrating curated screenings, industry engagement, and hands-on filmmaking, AIFFA creates a structured pathway that supports creative growth, professional readiness, and long-term career sustainability for Arab filmmakers.
           </p>

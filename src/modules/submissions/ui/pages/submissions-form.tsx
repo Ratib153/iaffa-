@@ -131,7 +131,7 @@ export default function SubmissionsForm() {
               <h2 className="text-primary font-bold text-lg uppercase tracking-wider mb-6">Film Submission Details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                     Film Title <span className="text-primary">*</span>
                   </label>
                   <input
@@ -144,7 +144,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                     Original Language(s) <span className="text-primary">*</span>
                   </label>
                   <input
@@ -157,7 +157,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">English Subtitles</label>
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">English Subtitles</label>
                   <select
                     {...register('englishSubtitles')}
                     className="w-full px-4 py-3 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
@@ -169,7 +169,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">Country of Production</label>
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">Country of Production</label>
                   <input
                     type="text"
                     {...register('countryOfProduction')}
@@ -179,7 +179,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">Year of Completion</label>
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">Year of Completion</label>
                   <select
                     {...register('yearOfCompletion')}
                     className="w-full px-4 py-3 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
@@ -192,7 +192,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                     Film Duration (minutes) <span className="text-primary">*</span>
                   </label>
                   <input
@@ -205,7 +205,7 @@ export default function SubmissionsForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                     Film Category <span className="text-primary">*</span>
                   </label>
                   <select
@@ -234,7 +234,7 @@ export default function SubmissionsForm() {
                 {/* Custom Category Input - appears when Other is selected */}
                 {selectedCategory === 'other' && (
                   <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-yellow-500 mb-2">
+                    <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                       Please specify category <span className="text-primary">*</span>
                     </label>
                     <input
@@ -250,7 +250,7 @@ export default function SubmissionsForm() {
                 )}
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-500 mb-2">Genre(s)</label>
+                  <label className="block text-sm font-medium text-[#c18f2c] mb-2">Genre(s)</label>
                   <input
                     type="text"
                     {...register('genres')}
@@ -263,7 +263,7 @@ export default function SubmissionsForm() {
 
             {/* Trailer URL */}
             <section className="border-b border-champagne/10 pb-8">
-              <label className="block text-sm font-medium text-yellow-500 mb-2">
+              <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                 Trailer URL <span className="text-primary">*</span>
               </label>
               <input
@@ -290,7 +290,7 @@ export default function SubmissionsForm() {
               {actorFields.map((field, index) => (
                 <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-yellow-500 font-medium">Actor {index + 1}</h4>
+                    <h4 className="text-[#c18f2c] font-medium">Actor {index + 1}</h4>
                     {actorFields.length > 1 && (
                       <button
                         type="button"
@@ -303,7 +303,7 @@ export default function SubmissionsForm() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Full Name <span className="text-primary">*</span>
                       </label>
                       <input
@@ -313,7 +313,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Role</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Role</label>
                       <select
                         {...register(`actors.${index}.role`)}
                         className="w-full px-4 py-2 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
@@ -326,7 +326,7 @@ export default function SubmissionsForm() {
                       </select>
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Photo Link</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Photo Link</label>
                       <input
                         type="text"
                         {...register(`actors.${index}.photoLink`)}
@@ -335,7 +335,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Short Biography <span className="text-primary">*</span>
                       </label>
                       <textarea
@@ -364,7 +364,7 @@ export default function SubmissionsForm() {
               {directorFields.map((field, index) => (
                 <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-yellow-500 font-medium">Director {index + 1}</h4>
+                    <h4 className="text-[#c18f2c] font-medium">Director {index + 1}</h4>
                     {directorFields.length > 1 && (
                       <button
                         type="button"
@@ -377,7 +377,7 @@ export default function SubmissionsForm() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Full Name <span className="text-primary">*</span>
                       </label>
                       <input
@@ -387,7 +387,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Role</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Role</label>
                       <select
                         {...register(`directors.${index}.role`)}
                         className="w-full px-4 py-2 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
@@ -398,7 +398,7 @@ export default function SubmissionsForm() {
                       </select>
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Photo Link</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Photo Link</label>
                       <input
                         type="text"
                         {...register(`directors.${index}.photoLink`)}
@@ -407,7 +407,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Short Biography <span className="text-primary">*</span>
                       </label>
                       <textarea
@@ -436,7 +436,7 @@ export default function SubmissionsForm() {
               {producerFields.map((field, index) => (
                 <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-yellow-500 font-medium">Producer {index + 1}</h4>
+                    <h4 className="text-[#c18f2c] font-medium">Producer {index + 1}</h4>
                     {producerFields.length > 1 && (
                       <button
                         type="button"
@@ -449,7 +449,7 @@ export default function SubmissionsForm() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Full Name <span className="text-primary">*</span>
                       </label>
                       <input
@@ -459,7 +459,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Role</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Role</label>
                       <select
                         {...register(`producers.${index}.role`)}
                         className="w-full px-4 py-2 bg-white/10 border border-champagne/20 rounded-lg text-champagne focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
@@ -470,7 +470,7 @@ export default function SubmissionsForm() {
                       </select>
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">Photo Link (optional)</label>
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">Photo Link (optional)</label>
                       <input
                         type="text"
                         {...register(`producers.${index}.photoLink`)}
@@ -479,7 +479,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Short Biography <span className="text-primary">*</span>
                       </label>
                       <textarea
@@ -508,7 +508,7 @@ export default function SubmissionsForm() {
               {crewFields.map((field, index) => (
                 <div key={field.id} className="rounded-lg p-6 mb-4 border border-champagne/10">
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-yellow-500 font-medium">Crew Member {index + 1}</h4>
+                    <h4 className="text-[#c18f2c] font-medium">Crew Member {index + 1}</h4>
                     {crewFields.length > 1 && (
                       <button
                         type="button"
@@ -521,7 +521,7 @@ export default function SubmissionsForm() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Full Name <span className="text-primary">*</span>
                       </label>
                       <input
@@ -531,7 +531,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Department / Role <span className="text-primary">*</span>
                       </label>
                       <input
@@ -542,7 +542,7 @@ export default function SubmissionsForm() {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-yellow-500 mb-2">
+                      <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                         Short Biography <span className="text-primary">*</span>
                       </label>
                       <textarea
@@ -559,7 +559,7 @@ export default function SubmissionsForm() {
             {/* Contact & Agreements */}
             <section>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-yellow-500 mb-2">
+                <label className="block text-sm font-medium text-[#c18f2c] mb-2">
                   Contact Email <span className="text-primary">*</span>
                 </label>
                 <input

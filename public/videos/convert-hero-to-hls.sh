@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-# Convert hero MP4 assets to adaptive HLS renditions (1080p/720p/480p)
+# Convert hero MP4 to adaptive HLS renditions (1080p/720p/480p)
 # Usage:
-#   ./convert-hero-to-hls.sh            # batch convert hero-*.mp4 (and hero.mp4 if present)
-#   ./convert-hero-to-hls.sh 1          # convert hero-1.mp4 (fallback to hero.mp4 for 1)
-#   ./convert-hero-to-hls.sh 2          # convert hero-2.mp4
-#   ./convert-hero-to-hls.sh 3          # convert hero-3.mp4
+#   ./convert-hero-to-hls.sh            # convert hero.mp4
 
 set -u
 
@@ -13,16 +10,6 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
   echo "Error: ffmpeg is not installed or not in PATH."
   echo "Install it first (macOS: brew install ffmpeg)."
   exit 1
-fi
-
-usage() {
-  echo "Usage: $0 [1|2|3]"
-  echo "  No argument: convert all hero-*.mp4 (and hero.mp4 if present)."
-  exit 1
-}
-
-if [[ $# -gt 1 ]]; then
-  usage
 fi
 
 convert_one() {
@@ -87,48 +74,15 @@ EOF
 
 files=()
 
-if [[ $# -eq 1 ]]; then
-  case "$1" in
-    1|2|3) ;;
-    *) usage ;;
-  esac
+input_file="hero.mp4"
 
-  candidate="hero-$1.mp4"
-  if [[ -f "$candidate" ]]; then
-    files+=("$candidate")
-  elif [[ "$1" == "1" && -f "hero.mp4" ]]; then
-    # Backward-compatible fallback for single hero.mp4 setups
-    files+=("hero.mp4")
-  else
-    echo "Error: File not found for argument '$1'. Expected: $candidate"
-    exit 1
-  fi
-else
-  shopt -s nullglob
-  for f in hero-*.mp4; do
-    files+=("$f")
-  done
-  if [[ -f "hero.mp4" ]]; then
-    files+=("hero.mp4")
-  fi
-  shopt -u nullglob
-
-  if [[ ${#files[@]} -eq 0 ]]; then
-    echo "Error: No input files found."
-    echo "Expected files like hero-1.mp4, hero-2.mp4, hero-3.mp4 (or hero.mp4)."
-    exit 1
-  fi
+if [[ ! -f "$input_file" ]]; then
+  echo "Error: Missing input file: $input_file"
+  exit 1
 fi
 
-failed=0
-for f in "${files[@]}"; do
-  if ! convert_one "$f"; then
-    failed=1
-  fi
-done
-
-if [[ $failed -ne 0 ]]; then
-  echo "\nCompleted with errors."
+if ! convert_one "$input_file"; then
+  echo "\nConversion failed."
   exit 1
 fi
 

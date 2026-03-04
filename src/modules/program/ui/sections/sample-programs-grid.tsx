@@ -7,80 +7,39 @@ interface DayItem {
   day: number
   title: string
   focus: string
-  dayActivities: readonly string[]
-  eveningActivities: readonly string[]
 }
 
 export default function ScheduleGrid({ sampleSchedule }: { sampleSchedule: DayItem[] }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {sampleSchedule.map((day) => {
-        const dayActivitiesToShow = day.dayActivities.slice(0, 2)
-        const dayActivitiesMore = day.dayActivities.length > 2
-        const eveningActivitiesToShow = day.eveningActivities.slice(0, 1)
-        const eveningActivitiesMore = day.eveningActivities.length > 1
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 py-20">
+      {sampleSchedule.map((day, index) => (
+        <div
+          key={day.day}
+          className={`group relative bg-slate-900/50 border border-slate-700/50 hover:border-slate-500/70 p-10 rounded-xl h-64 flex flex-col justify-between text-center transition-all duration-500 hover:shadow-xl hover:shadow-slate-800/50 ${day.day === 7 ? 'md:col-span-2' : ''}`}
+          style={{ animationDelay: `${index * 75}ms` }}
+        >
+          {/* Day Number */}
+          <h3 className="font-serif text-5xl md:text-4xl font-black text-[#c18f2c] mb-2 leading-none">
+            {day.title}
+          </h3>
 
-        return (
-          <div
-            key={day.day}
-            className={`bg-gray-900 p-8 rounded-lg flex flex-col h-full ${day.day === 7 ? 'md:col-span-2' : ''}`}
-          >
-            {/* Title and Focus */}
-            <h3 className="font-libre-baskerville text-xl font-bold text-yellow-500 mb-2 text-center">
-              Day {day.day} – {day.title}
-            </h3>
-            <p className="text-yellow-600 text-sm mb-6 text-center">
-              Focus: {day.focus}
+          {/* Title & Focus */}
+          <div>
+            <p className="text-sm text-slate-500 font-light tracking-wide">
+              {day.focus}
             </p>
-
-            {/* Day Activities */}
-            <div className="mb-6 flex-1">
-              <p className="text-gray-400 text-sm font-semibold mb-3">Day:</p>
-              <ul className="space-y-2 mb-3">
-                {dayActivitiesToShow.map((item: string) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-gray-400"
-                  >
-                    <span className="text-primary mt-1.5">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              {dayActivitiesMore && (
-                <p className="text-gray-400 text-sm">+1 more activities</p>
-              )}
-            </div>
-
-            {/* Evening Activities */}
-            <div className="mb-6">
-              <p className="text-gray-400 text-sm font-semibold mb-3">Evening:</p>
-              <ul className="space-y-2 mb-3">
-                {eveningActivitiesToShow.map((item: string) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-gray-400"
-                  >
-                    <span className="text-primary mt-1.5">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              {eveningActivitiesMore && (
-                <p className="text-gray-400 text-sm">+1 more activities</p>
-              )}
-            </div>
-
-            {/* Learn More Link */}
-            <Link
-              href={`/program/day-${String(day.day)}`}
-              className="text-primary hover:text-primary/80 font-medium text-sm flex items-center gap-2 mt-auto"
-            >
-              Learn More <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
-        )
-      })}
+
+          {/* CTA */}
+          <Link
+            href={`/program/day-${String(day.day)}`}
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-200 font-medium text-sm transition-colors duration-300 hover:gap-3 group-hover:translate-y-1"
+          >
+            Learn More
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      ))}
     </div>
   )
 }

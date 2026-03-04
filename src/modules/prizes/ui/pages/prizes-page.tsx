@@ -100,7 +100,7 @@ export default function PrizesPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             Prizes
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -113,7 +113,7 @@ export default function PrizesPage() {
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c]">
               Prize Categories
             </h2>
           </div>
@@ -138,7 +138,7 @@ export default function PrizesPage() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="font-serif text-2xl font-semibold text-yellow-500 mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="font-serif text-2xl font-semibold text-[#c18f2c] mb-1 group-hover:text-primary transition-colors">
                       {prize.title}
                     </h3>
 

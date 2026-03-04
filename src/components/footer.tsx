@@ -43,7 +43,7 @@ export function Footer() {
                 href="https://www.facebook.com/profile.php?id=61588401630735"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-600 hover:text-primary transition-colors"
+                className="text-[#c18f2c] hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -52,7 +52,7 @@ export function Footer() {
                 href="https://www.instagram.com/arabfilmfestivalofaustralia?igsh=MWZncHdtYndocmlkaQ%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-600 hover:text-primary transition-colors"
+                className="text-[#c18f2c] hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -61,7 +61,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/arab-international-film-festival-of-australia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-600 hover:text-primary transition-colors"
+                className="text-[#c18f2c] hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -70,7 +70,7 @@ export function Footer() {
                 href="https://www.youtube.com/channel/UCO2xJ6Cw1-5o1iolIJtO4yQ"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-600 hover:text-primary transition-colors"
+                className="text-[#c18f2c] hover:text-primary transition-colors"
                 aria-label="Youtube"
               >
                 <Youtube className="w-5 h-5" />
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Festival Column */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-yellow-500 mb-6">Festival</h4>
+            <h4 className="font-serif text-lg font-semibold text-[#c18f2c] mb-6">Festival</h4>
             <ul className="space-y-3">
               {festivalLinks.map((link) => (
                 <li key={link.href}>
@@ -97,7 +97,7 @@ export function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-yellow-500 mb-6">Resources</h4>
+            <h4 className="font-serif text-lg font-semibold text-[#c18f2c] mb-6">Resources</h4>
             <ul className="space-y-3">
               {resourceLinks.map((link) => (
                 <li key={link.href}>
@@ -114,7 +114,7 @@ export function Footer() {
 
           {/* Connect Column */}
           <div>
-            <h4 className="font-serif text-lg font-semibold text-yellow-500 mb-6">Connect</h4>
+            <h4 className="font-serif text-lg font-semibold text-[#c18f2c] mb-6">Connect</h4>
             <ul className="space-y-3">
               {connectLinks.map((link) => (
                 <li key={link.href}>
@@ -140,7 +140,7 @@ export function Footer() {
 
         {/* Legal Bar */}
         <div className="mt-16 pt-8 border-t border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-yellow-500 text-sm">
+          <p className="text-[#c18f2c] text-sm">
             © 2026 Arab International Film Festival of Australia
           </p>
           {/* <div className="flex items-center gap-6">

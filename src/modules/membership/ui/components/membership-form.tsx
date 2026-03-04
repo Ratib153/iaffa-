@@ -90,7 +90,7 @@ export function MembershipForm() {
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
-          <label htmlFor="fullName" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="fullName" className="block text-[#c18f2c] text-sm mb-2">
             Full Name <span className="text-primary">*</span>
           </label>
           <input
@@ -105,7 +105,7 @@ export function MembershipForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="email" className="block text-[#c18f2c] text-sm mb-2">
             Email Address <span className="text-primary">*</span>
           </label>
           <input
@@ -120,7 +120,7 @@ export function MembershipForm() {
           />
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="phone" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="phone" className="block text-[#c18f2c] text-sm mb-2">
             Phone <span className="text-primary">*</span>
           </label>
           <div className="flex gap-2">
@@ -162,7 +162,7 @@ export function MembershipForm() {
           </div>
         </div>
         <div>
-          <label htmlFor="country" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="country" className="block text-[#c18f2c] text-sm mb-2">
             Country <span className="text-primary">*</span>
           </label>
           <select
@@ -180,7 +180,7 @@ export function MembershipForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="membershipType" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="membershipType" className="block text-[#c18f2c] text-sm mb-2">
             Membership Type <span className="text-primary">*</span>
           </label>
           <select
@@ -197,7 +197,7 @@ export function MembershipForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="organization" className="block text-yellow-500 text-sm mb-2">
+          <label htmlFor="organization" className="block text-[#c18f2c] text-sm mb-2">
             Organization / Institution
           </label>
           <input
@@ -212,7 +212,7 @@ export function MembershipForm() {
         </div>
       </div>
       <div className="mb-6">
-        <label htmlFor="message" className="block text-yellow-500 text-sm mb-2">
+        <label htmlFor="message" className="block text-[#c18f2c] text-sm mb-2">
           Message (Optional)
         </label>
         <textarea

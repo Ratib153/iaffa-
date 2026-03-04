@@ -57,10 +57,10 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             About the Festival
           </h1>
-          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#c18f2c] text-lg max-w-2xl mx-auto">
             A platform for Arab voices, stories, and cinematic excellence
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
       <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-900 p-10 text-center">
-            <p className="text-yellow-500 tracking-[0.2em] uppercase text-sm mb-4">Our Mission</p>
+            <p className="text-[#c18f2c] tracking-[0.2em] uppercase text-sm mb-4">Our Mission</p>
             <p className="text-gray-400 leading-relaxed text-lg">
               We connect Australian audiences with the vibrant world of Arab cinema through carefully curated film programs, industry events, and cultural exchanges. Our mission is to provide a platform that elevates Arab voices, supports emerging filmmakers, and builds bridges between cultures through the universal language of cinema.
             </p>
@@ -79,10 +79,10 @@ export default function AboutPage() {
       </section>
 
       {/* Vision */}
-      <section className=" bg-black">
+      <section className="bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-900 p-10 text-center">
-            <p className="text-yellow-500 tracking-[0.2em] uppercase text-sm mb-4">Our Vision</p>
+            <p className="text-[#c18f2c] tracking-[0.2em] uppercase text-sm mb-4">Our Vision</p>
             <p className="text-gray-400 leading-relaxed text-lg">
               To be Australia&apos;s premier showcase of Arab cinema, fostering cross-cultural understanding and celebrating the artistic achievements of Arab filmmakers. We envision a future where Arab stories are recognized, appreciated, and celebrated as essential contributions to world cinema.
             </p>
@@ -94,44 +94,44 @@ export default function AboutPage() {
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-12">
-            <p className="text-yellow-500 tracking-[0.2em] uppercase text-sm mb-4">Our Goals</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-600 mb-6">
+            <p className="text-[#c18f2c] tracking-[0.2em] uppercase text-sm mb-4">Our Goals</p>
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-[#c18f2c] mb-6">
               What We Strive For
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Cultural Bridge</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Cultural Bridge</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Create meaningful connections between Arab and Australian cultures through the power of storytelling and shared cinematic experiences.
               </p>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Filmmaker Support</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Filmmaker Support</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Provide emerging and established Arab filmmakers with platforms, resources, and opportunities to showcase their work and advance their careers.
               </p>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Audience Engagement</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Audience Engagement</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Engage diverse audiences across Australia, introducing them to the richness and diversity of Arab cinema and cultural narratives.
               </p>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Industry Development</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Industry Development</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Foster professional development through workshops, masterclasses, and networking opportunities that strengthen the global film industry.
               </p>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Recognition & Excellence</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Recognition & Excellence</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Recognize and celebrate excellence in Arab cinema through awards, showcases, and critical appreciation of outstanding filmmaking.
               </p>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-3">Long-term Impact</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-3">Long-term Impact</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Build a sustainable, long-term platform that continues to grow and evolve, leaving a lasting legacy for Arab cinema in Australia.
               </p>
@@ -144,14 +144,14 @@ export default function AboutPage() {
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-12">
-            <p className="text-yellow-500 tracking-[0.2em] uppercase text-sm mb-4">Our Objectives</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-600 mb-6">
+            <p className="text-[#c18f2c] tracking-[0.2em] uppercase text-sm mb-4">Our Objectives</p>
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-[#c18f2c] mb-6">
               How We Achieve Our Goals
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-4">Curate Exceptional Programs</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-4">Curate Exceptional Programs</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
@@ -168,7 +168,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-4">Foster Industry Connections</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-4">Foster Industry Connections</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-4">Provide Educational Opportunities</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-4">Provide Educational Opportunities</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
@@ -202,7 +202,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="bg-gray-900 p-8">
-              <h3 className="font-libre-baskerville text-xl font-semibold text-yellow-500 mb-4">Build Community Engagement</h3>
+              <h3 className="font-libre-baskerville text-xl font-semibold text-[#c18f2c] mb-4">Build Community Engagement</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
@@ -228,7 +228,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <p className="text-primary tracking-[0.2em] uppercase text-sm">Our Purpose</p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500 leading-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c] leading-tight">
                 Why Arab Cinema in Australia
               </h2>
               <p className="text-gray-400 leading-relaxed">
@@ -254,29 +254,30 @@ export default function AboutPage() {
       {/* Leadership Team */}
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
-              Our Team
+          <div className="text-center mb-20">
+            <p className="text-[#c18f2c] tracking-[0.3em] uppercase text-xs mb-6 font-semibold">Meet Our Team</p>
+            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#c18f2c] mb-6">
+              Leadership & Expertise
             </h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="text-center">
-                {/* <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary/30"> */}
-                  {/* <Image
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  /> */}
-                {/* </div> */}
-                <h3 className="font-serif text-xl font-semibold text-yellow-500 mb-1">
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+            {team.map((member, index) => (
+              <div key={member.name} className="group">
+                <div className="flex items-baseline gap-3 mb-3">
+                  <span className="text-[#c18f2c] text-xs font-light tracking-[0.2em]">{String(index + 1).padStart(2, "0")}</span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-yellow-500/40 to-transparent" />
+                </div>
+                <h3 className="font-serif text-2xl font-semibold text-[#c18f2c] group-hover:text-yellow-400 transition-colors mb-2">
                   {member.name}
                 </h3>
-                <p className="text-primary text-sm mb-3">{member.role}</p>
-                <p className="text-gray-400 text-sm">{member.bio}</p>
+                <p className="text-[#c18f2c] text-xs font-medium tracking-[0.16em] uppercase mb-3">{member.role}</p>
+                <p className="text-gray-400 leading-relaxed text-sm">{member.bio}</p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -296,7 +297,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/membership"
-              className="w-full sm:w-auto px-8 py-4 border border-yellow-500/30 text-yellow-500 font-medium tracking-wide hover:border-primary hover:text-primary transition-colors text-center"
+              className="w-full sm:w-auto px-8 py-4 border border-[#c18f2c]/30 text-[#c18f2c] font-medium tracking-wide hover:border-primary hover:text-primary transition-colors text-center"
             >
               Become a Member
             </Link>

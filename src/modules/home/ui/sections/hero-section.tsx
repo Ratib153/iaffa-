@@ -29,7 +29,7 @@ export function HeroSection() {
       > {/*"#f7f2ed"*/}
         <div className="max-w-[1400px] mx-auto px-6">
           <p
-            className="mb-3 text-left text-sm sm:text-base uppercase tracking-widest text-yellow-500"
+            className="mb-3 text-left text-sm sm:text-base uppercase tracking-widest text-[#c18f2c]"
           >
             Experience a Gift for Life
           </p>
@@ -46,7 +46,8 @@ export function HeroSection() {
                 playsInline
                 poster="/videos/hero-poster.jpg"
               >
-                <source src="/videos/hero.mp4" type="video/mp4" />
+                <source src="/videos/hero-hls/hero.m3u8" type="application/x-mpegURL" />
+                {/* <source src="/videos/hero.mp4" type="video/mp4" /> */} {/* Fallback for browsers that don't support HLS */}
               </video>
             </div>
           </div>

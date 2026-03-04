@@ -77,7 +77,7 @@ export default function SubmissionsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             Film Submissions
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -92,13 +92,13 @@ export default function SubmissionsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <p className="text-primary tracking-[0.2em] uppercase text-sm">Call for Submissions 2026</p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500 leading-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c] leading-tight\">
               Share Your Vision
               </h2>
               <p className="text-gray-400 leading-relaxed">
                 The International Arab Film Festival of Australia invites filmmakers from around the world to submit their work for consideration in our 2026 edition. We are seeking bold, innovative, and compelling films that showcase the diversity and depth of Arab cinema.
               </p>
-              <p className="text-yellow-600 leading-relaxed">
+              <p className="text-[#c18f2c] leading-relaxed\">
                 Whether you&apos;re an established filmmaker or emerging talent, if your work explores Arab themes, cultures, or perspectives, we want to see it. Join us in celebrating the art of Arab storytelling.
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function SubmissionsPage() {
       <section className="py-24 bg-black">
         <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-16 px-6 sm:px-8 lg:px-12">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c]">
               Eligibility Requirements
             </h2>
           </div>
@@ -154,10 +154,10 @@ export default function SubmissionsPage() {
             {selectionSteps.map((step, index) => (
               <Fragment key={step.title}>
                 <div className="glass-card p-8 text-center flex-1 max-w-xs w-full">
-                  <h3 className="font-serif text-xl font-semibold text-yellow-500 mb-3">
+                  <h3 className="font-serif text-xl font-semibold text-[#c18f2c] mb-3\">
                     {step.title}
                   </h3>
-                  <p className="text-yellow-600 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-[#c18f2c] text-sm leading-relaxed\">{step.description}</p>
                 </div>
                 {index < selectionSteps.length - 1 && (
                   <ArrowRight className="w-6 h-6 text-primary/50 flex-shrink-0 hidden md:block" />

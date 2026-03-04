@@ -50,10 +50,10 @@ export default function OmanPartnershipPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             Oman Partnership
           </h1>
-          <p className="text-yellow-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#c18f2c] text-lg max-w-2xl mx-auto">
             Connecting cultures through the universal language of cinema
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function OmanPartnershipPage() {
               {goals.map((goal) => (
                 <div key={goal} className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2" />
-                  <p className="text-yellow-600 text-sm">{goal}</p>
+                  <p className="text-[#c18f2c] text-sm">{goal}</p>
                 </div>
               ))}
             </div>
@@ -103,7 +103,7 @@ export default function OmanPartnershipPage() {
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-primary tracking-[0.2em] uppercase text-sm">Programs</p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500 leading-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c] leading-tight">
                 Mentorship & Masterclasses
               </h2>
               <p className="text-gray-400 leading-relaxed">
@@ -113,11 +113,11 @@ export default function OmanPartnershipPage() {
                 {mentorshipItems.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2" />
-                    <p className="text-yellow-600">{item}</p>
+                    <p className="text-[#c18f2c]">{item}</p>
                   </li>
                 ))}
               </ul>
-              <p className="text-yellow-600/50 text-sm italic">
+              <p className="text-[#c18f2c]/50 text-sm italic">
                 These activities are delivered through AIFFA, with IFFA as the delivery partner, in collaboration with the Oman Film Society.
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function OmanPartnershipPage() {
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c]">
               Oman Spotlight
             </h2>
           </div>
@@ -145,7 +145,7 @@ export default function OmanPartnershipPage() {
                 <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <card.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-yellow-500 mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-xl font-semibold text-[#c18f2c] mb-3 group-hover:text-primary transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-gray-400 text-sm">{card.description}</p>
@@ -159,7 +159,7 @@ export default function OmanPartnershipPage() {
       <section className="py-24 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Cultural Bridge</p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-yellow-500 mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#c18f2c] mb-6">
             Cultural & Industry Exchange
           </h2>
           <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">

@@ -134,7 +134,7 @@ export function FeaturedFilmsSection() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-primary tracking-[0.2em] uppercase text-sm mb-3">Now Showing</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-[#c18f2c]">
               Featured Films
             </h2>
           </div>

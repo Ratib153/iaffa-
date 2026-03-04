@@ -21,7 +21,7 @@ export function ExperienceCinemaSection() {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-primary tracking-[0.2em] uppercase text-sm">Discover</p>
-            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-yellow-500 leading-tight">
+            <h2 className="font-libre-baskerville text-3xl sm:text-4xl font-bold text-[#c18f2c] leading-tight">
               Experience Arab Cinema
             </h2>
             <div className="space-y-4 text-gray-400 leading-relaxed">

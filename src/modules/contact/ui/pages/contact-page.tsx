@@ -122,7 +122,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#c18f2c] mb-6">
             Contact Us
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -135,7 +135,7 @@ export default function ContactPage() {
       <section className="py-24 bg-black">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-yellow-500">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#c18f2c]">
               Send Us a Message
             </h2>
           </div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
             )}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="fullName" className="block text-yellow-500 text-sm mb-2">
+                <label htmlFor="fullName" className="block text-[#c18f2c] text-sm mb-2">
                   Full Name <span className="text-primary">*</span>
                 </label>
                 <input
@@ -172,7 +172,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-yellow-500 text-sm mb-2">
+                <label htmlFor="email" className="block text-[#c18f2c] text-sm mb-2">
                   Email <span className="text-primary">*</span>
                 </label>
                 <input
@@ -187,7 +187,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="phone" className="block text-yellow-500 text-sm mb-2">
+                <label htmlFor="phone" className="block text-[#c18f2c] text-sm mb-2">
                   Phone
                 </label>
                 <div className="flex gap-2">
@@ -230,7 +230,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mb-4">
-              <label htmlFor="subject" className="block text-yellow-500 text-sm mb-2">
+              <label htmlFor="subject" className="block text-[#c18f2c] text-sm mb-2">
                 Subject <span className="text-primary">*</span>
               </label>
               <select
@@ -266,7 +266,7 @@ export default function ContactPage() {
               )}
             </div>
             <div className="mb-6">
-              <label htmlFor="message" className="block text-yellow-500 text-sm mb-2">
+              <label htmlFor="message" className="block text-[#c18f2c] text-sm mb-2">
                 Message <span className="text-primary">*</span>
               </label>
               <textarea
@@ -331,7 +331,7 @@ export default function ContactPage() {
       {/* Follow Us */}
       <section className="py-16 bg-black">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl font-bold text-yellow-500 mb-6">
+          <h2 className="font-serif text-2xl font-bold text-[#c18f2c] mb-6">
             Follow Us
           </h2>
           <div className="flex items-center justify-center gap-6 mb-6">
